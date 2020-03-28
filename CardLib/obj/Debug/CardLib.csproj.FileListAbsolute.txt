@@ -8,3 +8,5 @@ D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\CardLib\bin\Debu
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\CardLib\obj\Debug\CardLib.csprojAssemblyReference.cache
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\CardLib\obj\Debug\CardLib.dll
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\CardLib\obj\Debug\CardLib.pdb
+D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\CardLib\obj\Debug\CardLib.Properties.Resources.resources
+D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\CardLib\obj\Debug\CardLib.csproj.GenerateResource.cache

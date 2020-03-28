@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,6 +50,191 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CardRank.cs" />
     <Compile Include="CardSuit.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ace_H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ace_S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ace_C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ace_D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gray_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deuce_D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deuce_H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deuce_S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eight_C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eight_D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eight_H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eight_S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Five_C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Five_D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Five_H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Five_S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Four_C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Four_D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Four_H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Four_S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jack_C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jack_D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jack_H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jack_S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\King_C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\King_D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\King_H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\King_S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nine_C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nine_D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nine_H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nine_S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Queen_C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Queen_D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Queen_H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Queen_S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seven_C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seven_D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seven_H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seven_S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Six_C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Six_D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Six_H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Six_S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ten_C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ten_D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ten_H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ten_S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Three_C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Three_D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Three_H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Three_S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deuce_C.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

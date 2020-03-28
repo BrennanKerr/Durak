@@ -3,10 +3,13 @@
  * Defines the player card class
  * 
  * Author:  Group 1
- * Since:   8 March 2020
+ * Since:   28 March 2020
+ * 
+ * See: http://acbl.mybigcommerce.com/52-playing-cards/ for card images
  */
 
 using System;
+using System.Drawing;
 
 namespace CardLib
 {
@@ -40,6 +43,11 @@ namespace CardLib
             get { return myRank; }
             set { myRank = value; }
         }
+
+        /// <summary>
+        /// States if the card is face up
+        /// </summary>
+        public bool IsFaceUp = false;
 
         /// <summary>
         /// States whether the trump modifier exists
@@ -163,6 +171,30 @@ namespace CardLib
         public object Clone()
         {
             return MemberwiseClone();
+        }
+
+        /// <summary>
+        /// Returns the corresponding Card Image
+        /// </summary>
+        /// <returns></returns>
+        public Image GetImage()
+        {
+            string url; // the corresponding url for the card
+
+            // if the card is face up, return it with the name
+            // Rank_L (L being first letter of the suit)
+            if (IsFaceUp)
+            {
+                url = myRank.ToString() + "_" + mySuit.ToString().Substring(0, 1).ToUpper().ToString();
+            }
+            // otherwise, save the face down card
+            else
+            {
+                url = "gray_back";
+            }
+
+            // return the card as an image
+            return Properties.Resources.ResourceManager.GetObject(url) as Image;
         }
         #endregion
     }
