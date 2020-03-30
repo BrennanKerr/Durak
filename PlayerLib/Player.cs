@@ -26,6 +26,11 @@ namespace PlayerLib
         /// The name of the player
         /// </summary>
         private string myName;
+        public string Name
+        {
+            get { return myName; }
+            set { myName = value; }
+        }
         /// <summary>
         /// The players number
         /// </summary>
@@ -86,6 +91,20 @@ namespace PlayerLib
         }
 
         /// <summary>
+        /// Delete the card from the lsit
+        /// </summary>
+        /// <param name="oldCard">the card to be removed</param>
+        public void Remove(Card oldCard) { myHand.Remove(oldCard); }
+
+        /// <summary>
+        /// Removes the cards from the hand
+        /// </summary>
+        public void RemoveCards()
+        {
+            myHand.RemoveCards();
+        }
+
+        /// <summary>
         /// Retrieves the players entire hand of cards
         /// </summary>
         /// <returns>the players hand as a CardList</returns>
@@ -102,6 +121,16 @@ namespace PlayerLib
         public Card DrawCard(int index)
         {
             return myHand.DrawCard(index);
+        }
+
+        /// <summary>
+        /// Replaces a card at a given index
+        /// </summary>
+        /// <param name="index">the card index to be overwritten</param>
+        /// <param name="newCard">the card to place in the index</param>
+        public void ReplaceCard(int index, Card newCard)
+        {
+            myHand.ReplaceCard(index, newCard);
         }
         #endregion
 

@@ -58,6 +58,10 @@ namespace CardLib
         /// NOTE: Will only function is trumpsExist is true
         /// </summary>
         public static CardSuit trumpSuit = CardSuit.Clubs;
+        /// <summary>
+        /// Determines if ace is declared as high
+        /// </summary>
+        public static bool IsAceHigh = false;
 
         #endregion
 
@@ -150,7 +154,26 @@ namespace CardLib
 
         public override int GetHashCode()
         {
-            return 13 * (int)mySuit + (int)myRank;
+            // sets the initial hash
+            int hash = 13 * (int)mySuit;
+
+            if (myRank == CardRank.Ace)
+            {
+                if (IsAceHigh)
+                    hash += (int)myRank;
+                else
+                    hash += 1;
+            }
+            else
+                hash += (int)myRank;
+
+            // if there are trumps and the suit matches the trump
+            // add 100 to the hash code
+            if (trumpsExist && (mySuit == trumpSuit))
+                hash += 100;
+
+            // return the code
+            return hash;
         }
         #endregion
 

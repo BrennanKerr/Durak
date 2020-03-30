@@ -58,6 +58,10 @@ namespace PlayerLib
         /// <param name="card">the card to look for</param>
         /// <returns>true if the card exists in the hand</returns>
         public bool Contains(Card card) { return myCards.Contains(card); }
+        /// <summary>
+        /// Removes all cards in the hand
+        /// </summary>
+        public void RemoveCards() { myCards.Clear(); }
         #endregion
 
         #region OTHER_METHODS
@@ -78,7 +82,7 @@ namespace PlayerLib
         /// </summary>
         public CardList Cards
         { 
-            get { return myCards; }
+            get { return myCards.Clone() as CardList; }
             set { value.CopyTo(myCards); }
         }
 
@@ -91,6 +95,12 @@ namespace PlayerLib
             return myCards.Count;
         }
 
+        /// <summary>
+        /// Replaces the card at the given index
+        /// </summary>
+        /// <param name="index">the index of the card that will be replced</param>
+        /// <param name="newCard">the card that will replace it</param>
+        public void ReplaceCard(int index, Card newCard) { this.myCards[index] = newCard.Clone() as Card; }
         /// <summary>
         /// Returns the hand as a string
         /// </summary>

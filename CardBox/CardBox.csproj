@@ -42,18 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CardBox.cs">
+    <Compile Include="CardPictureBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CardBox.Designer.cs">
-      <DependentUpon>CardBox.cs</DependentUpon>
+    <Compile Include="CardPictureBox.Designer.cs">
+      <DependentUpon>CardPictureBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CardBox.resx">
-      <DependentUpon>CardBox.cs</DependentUpon>
+    <EmbeddedResource Include="CardPictureBox.resx">
+      <DependentUpon>CardPictureBox.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -3,8 +3,8 @@ D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\CardBox\bin\Debu
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\CardBox\bin\Debug\CardLib.dll
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\CardBox\bin\Debug\CardLib.pdb
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\CardBox\obj\Debug\CardBox.csprojAssemblyReference.cache
-D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\CardBox\obj\Debug\CardBox.CardBox.resources
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\CardBox\obj\Debug\CardBox.csproj.GenerateResource.cache
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\CardBox\obj\Debug\CardBox.csproj.CopyComplete
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\CardBox\obj\Debug\CardBox.dll
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\CardBox\obj\Debug\CardBox.pdb
+D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\CardBox\obj\Debug\CardBox.CardPictureBox.resources

@@ -1,6 +1,6 @@
 ﻿namespace CardBox
 {
-    partial class CardBox
+    partial class CardPictureBox
     {
         /// <summary>
         /// Required designer variable.
@@ -36,23 +36,24 @@
             // 
             this.pbCardBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbCardBox.Location = new System.Drawing.Point(0, 0);
-            this.pbCardBox.MaximumSize = new System.Drawing.Size(345, 528);
-            this.pbCardBox.MinimumSize = new System.Drawing.Size(345, 528);
+            this.pbCardBox.MaximumSize = new System.Drawing.Size(86, 132);
+            this.pbCardBox.MinimumSize = new System.Drawing.Size(86, 132);
             this.pbCardBox.Name = "pbCardBox";
-            this.pbCardBox.Size = new System.Drawing.Size(345, 528);
+            this.pbCardBox.Size = new System.Drawing.Size(86, 132);
             this.pbCardBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbCardBox.TabIndex = 0;
             this.pbCardBox.TabStop = false;
+            this.pbCardBox.Click += new System.EventHandler(this.pbCardBox_Click);
             // 
-            // CardBox
+            // CardPictureBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pbCardBox);
-            this.MaximumSize = new System.Drawing.Size(345, 528);
-            this.MinimumSize = new System.Drawing.Size(345, 528);
-            this.Name = "CardBox";
-            this.Size = new System.Drawing.Size(345, 528);
+            this.MaximumSize = new System.Drawing.Size(86, 132);
+            this.MinimumSize = new System.Drawing.Size(86, 132);
+            this.Name = "CardPictureBox";
+            this.Size = new System.Drawing.Size(86, 132);
             this.Load += new System.EventHandler(this.CardBox_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbCardBox)).EndInit();
             this.ResumeLayout(false);
