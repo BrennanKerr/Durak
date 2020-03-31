@@ -9,6 +9,7 @@
  */
 
 
+using System;
 using System.Windows.Forms;
 using CardBox;
 using PlayerLib;
@@ -26,6 +27,18 @@ namespace PlayerHandControl
         /// The player whose hand the panel controls
         /// </summary>
         private Player myPlayer;
+
+        /// <summary>
+        /// Stores the face up value of the players hand
+        /// </summary>
+        private bool faceUpValue;
+        public bool FaceUp
+        { 
+            get { return faceUpValue; }
+            set { faceUpValue = value; }
+        }
+
+        new public EventHandler Click;
 
         /// <summary>
         /// Gets or sets the players information
@@ -94,6 +107,10 @@ namespace PlayerHandControl
             AddPlayingCard(cardBox);
         }
 
+        /// <summary>
+        /// Removes the corresponding card from the panel and players hand
+        /// </summary>
+        /// <param name="card"></param>
         public void RemovePlayingCard(CardPictureBox card)
         {
             myPlayer.Remove(card.PlayingCard);
@@ -159,11 +176,16 @@ namespace PlayerHandControl
         /// </summary>
         public void OrderCards()
         {
+            MessageBox.Show("Currently Not Working as Intended");
+            string cardListString = "";
             System.Diagnostics.Debug.WriteLine("\n\n==========New Run");
+            // saves the player's list of cards to a new CardList object
             CardList cards = myPlayer.Cards();
 
+            // run through each card in the array
             for (int i = 0; i < cards.Count - 1; i++)
             {
+                /*Card firstCard = cards[i].Clone() as Card;*/
                 for (int j = 1; j < cards.Count; j++)
                 {
                     Card firstCard = cards[i].Clone() as Card;
@@ -173,26 +195,44 @@ namespace PlayerHandControl
                     {
                         cards[i] = secondCard;
                         cards[j] = firstCard;
-
-                        /*
-                        myPlayer.ReplaceCard(i, secondCard);
-                        myPlayer.ReplaceCard(j, firstCard);
-
-                        (pnlHand.Controls[i] as CardPictureBox).PlayingCard = secondCard;
-                        (pnlHand.Controls[j] as CardPictureBox).PlayingCard = firstCard;
-                        */
+                        //break;
                     }
-                    System.Diagnostics.Debug.WriteLine(firstCard + " : " + secondCard + "\n\tTurns into " + cards[i] + " : " + cards[j]);
+                    System.Diagnostics.Debug.WriteLine(firstCard + " : " + secondCard + "\t\n" + ((firstCard > secondCard) ? ">" : "<"));
+
+                    foreach (Card c in cards)
+                        cardListString += c.ToString() + "\n";
+                    System.Diagnostics.Debug.WriteLine("\n\nCARD LIST\n" + cardListString);
+                    cardListString = "";
                 }
             }
 
             myPlayer.RemoveCards();
             foreach (Card c in cards)
+            {
                 myPlayer.AddCard(c);
+                cardListString += c.ToString() + "\n";
+            }
 
             for (int i = 0; i < cards.Count; i++)
                 (pnlHand.Controls[i] as CardPictureBox).PlayingCard = cards[i];
+
+            System.Diagnostics.Debug.WriteLine("\n\nCARD LIST\n" + cardListString);
         }
 
+        /// <summary>
+        /// Flips the control so the labels are underneath the panel
+        /// NOTE: Cannot be reversed
+        /// </summary>
+        public void FlipControl()
+        {
+            pnlHand.Top = this.Top;
+            lblName.Top = 132;
+            lblNumberOfCards.Top = 149;
+        }
+
+        private void PlayerHandControl_Click(object sender, EventArgs e)
+        {
+            Click(sender, e);
+        }
     }
 }

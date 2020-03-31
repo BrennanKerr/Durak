@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CardBox;
 using CardLib;
+using PlayerHandControl;
 
 namespace HandTester
 {

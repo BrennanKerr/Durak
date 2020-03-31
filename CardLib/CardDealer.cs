@@ -19,15 +19,16 @@ namespace CardLib
         /// <summary>
         /// The cards in play
         /// </summary>
-        CardList dealerCards;
+        private CardList dealerCards;
         /// <summary>
         /// The number of cards (52, 36, 20) in the game
         /// </summary>
-        int numberOfCards;
+        private int numberOfCards;
         /// <summary>
         /// The next card in the dealers hand
         /// </summary>
-        int nextCardIndex;
+        private int nextCardIndex;
+        public int CurrentCardIndex {  get { return nextCardIndex; } }
 
         /// <summary>
         /// Constructor: Initializes a CardDealer obkect

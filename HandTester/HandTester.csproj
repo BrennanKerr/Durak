@@ -88,6 +88,10 @@
       <Project>{f9f2c025-8076-4bbc-86ce-fd2a64c37587}</Project>
       <Name>CardLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PlayerHandControl\PlayerHandControl.csproj">
+      <Project>{12d2fa75-3058-4dd8-b91e-cee8fe717c3f}</Project>
+      <Name>PlayerHandControl</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PlayerLib\PlayerLib.csproj">
       <Project>{575db38d-edd1-40dd-89e9-83bf2d1fa8a1}</Project>
       <Name>PlayerLib</Name>

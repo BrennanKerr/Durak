@@ -44,6 +44,8 @@
             this.pbCardBox.TabIndex = 0;
             this.pbCardBox.TabStop = false;
             this.pbCardBox.Click += new System.EventHandler(this.pbCardBox_Click);
+            this.pbCardBox.MouseEnter += new System.EventHandler(this.pbCardBox_MouseEnter);
+            this.pbCardBox.MouseLeave += new System.EventHandler(this.pbCardBox_MouseLeave);
             // 
             // CardPictureBox
             // 

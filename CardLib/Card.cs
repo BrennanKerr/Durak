@@ -57,7 +57,13 @@ namespace CardLib
         /// Defines the suit that is the Trump Suit
         /// NOTE: Will only function is trumpsExist is true
         /// </summary>
-        public static CardSuit trumpSuit = CardSuit.Clubs;
+        private static CardSuit trumpSuit = CardSuit.Clubs;
+        public static CardSuit TrumpSuit
+        { 
+            get { return trumpSuit; }
+            set { trumpSuit = value; }
+        }
+
         /// <summary>
         /// Determines if ace is declared as high
         /// </summary>
@@ -91,11 +97,11 @@ namespace CardLib
         }
         #endregion
         #region OPERATORS
-        public static bool operator==(Card left, Card right)
+        public static bool operator ==(Card left, Card right)
         {
             return (left.Rank == right.Rank);
         }
-        public static bool operator!=(Card left, Card right)
+        public static bool operator !=(Card left, Card right)
         {
             return !(left == right);
         }
@@ -178,6 +184,22 @@ namespace CardLib
         #endregion
 
         #region OTHER_METHODS
+        /// <summary>
+        /// Returns the value of the rank.
+        /// Used as Ace can either be 1 or the highest
+        /// </summary>
+        /// <param name="card">the card that needs to be checked</param>
+        /// <returns></returns>
+        static private int GetRankValue(Card card)
+        {
+            int rankValue;
+            if (card.Rank == CardRank.Ace && IsAceHigh)
+                rankValue = (int)CardRank.Ace;
+            else
+                rankValue = 1;
+
+            return rankValue;
+        }
         /// <summary>
         /// Overrides the ToString() operator
         /// </summary>

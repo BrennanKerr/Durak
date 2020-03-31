@@ -29,10 +29,20 @@
         private void InitializeComponent()
         {
             PlayerLib.Player player1 = new PlayerLib.Player();
+            this.btnSort = new System.Windows.Forms.Button();
             this.cpbDeck = new CardBox.CardPictureBox();
             this.phcHand = new PlayerHandControl.PlayerHandControl();
-            this.btnSort = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnSort
+            // 
+            this.btnSort.Location = new System.Drawing.Point(460, 224);
+            this.btnSort.Name = "btnSort";
+            this.btnSort.Size = new System.Drawing.Size(75, 23);
+            this.btnSort.TabIndex = 2;
+            this.btnSort.Text = "Order Cards";
+            this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // cpbDeck
             // 
@@ -49,31 +59,21 @@
             // 
             // phcHand
             // 
-            this.phcHand.Location = new System.Drawing.Point(12, 224);
+            this.phcHand.Location = new System.Drawing.Point(12, 272);
             this.phcHand.Name = "phcHand";
             player1.Name = null;
             this.phcHand.PlayerInformation = player1;
             this.phcHand.PlayerName = null;
-            this.phcHand.Size = new System.Drawing.Size(1000, 224);
-            this.phcHand.TabIndex = 1;
-            // 
-            // btnSort
-            // 
-            this.btnSort.Location = new System.Drawing.Point(460, 224);
-            this.btnSort.Name = "btnSort";
-            this.btnSort.Size = new System.Drawing.Size(75, 23);
-            this.btnSort.TabIndex = 2;
-            this.btnSort.Text = "Order Cards";
-            this.btnSort.UseVisualStyleBackColor = true;
-            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
+            this.phcHand.Size = new System.Drawing.Size(1000, 166);
+            this.phcHand.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1032, 450);
-            this.Controls.Add(this.btnSort);
             this.Controls.Add(this.phcHand);
+            this.Controls.Add(this.btnSort);
             this.Controls.Add(this.cpbDeck);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -84,8 +84,8 @@
         #endregion
 
         private CardBox.CardPictureBox cpbDeck;
-        private PlayerHandControl.PlayerHandControl phcHand;
         private System.Windows.Forms.Button btnSort;
+        private PlayerHandControl.PlayerHandControl phcHand;
     }
 }
 

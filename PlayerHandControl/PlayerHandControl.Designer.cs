@@ -36,7 +36,7 @@
             // pnlHand
             // 
             this.pnlHand.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.pnlHand.Location = new System.Drawing.Point(0, 86);
+            this.pnlHand.Location = new System.Drawing.Point(0, 35);
             this.pnlHand.Margin = new System.Windows.Forms.Padding(0);
             this.pnlHand.Name = "pnlHand";
             this.pnlHand.Size = new System.Drawing.Size(1000, 132);
@@ -46,21 +46,21 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblName.Location = new System.Drawing.Point(4, 0);
+            this.lblName.Location = new System.Drawing.Point(3, 1);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(46, 17);
+            this.lblName.Size = new System.Drawing.Size(45, 17);
             this.lblName.TabIndex = 1;
-            this.lblName.Text = "label1";
+            this.lblName.Text = "Name";
             // 
             // lblNumberOfCards
             // 
             this.lblNumberOfCards.AutoSize = true;
             this.lblNumberOfCards.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblNumberOfCards.Location = new System.Drawing.Point(4, 50);
+            this.lblNumberOfCards.Location = new System.Drawing.Point(3, 18);
             this.lblNumberOfCards.Name = "lblNumberOfCards";
-            this.lblNumberOfCards.Size = new System.Drawing.Size(46, 17);
+            this.lblNumberOfCards.Size = new System.Drawing.Size(73, 17);
             this.lblNumberOfCards.TabIndex = 2;
-            this.lblNumberOfCards.Text = "label1";
+            this.lblNumberOfCards.Text = "# of Cards";
             // 
             // PlayerHandControl
             // 
@@ -70,7 +70,8 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.pnlHand);
             this.Name = "PlayerHandControl";
-            this.Size = new System.Drawing.Size(1000, 224);
+            this.Size = new System.Drawing.Size(1000, 166);
+            this.Click += new System.EventHandler(this.PlayerHandControl_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 

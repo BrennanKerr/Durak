@@ -24,7 +24,18 @@ namespace CardBox
         /// </summary>
         private Card myCard;
 
+        /// <summary>
+        /// Allows for the Click control to be given to the CardPictureBox
+        /// </summary>
         new public event EventHandler Click;
+        /// <summary>
+        /// Allows for the MouseEnter event to be given to the CardPictureBox
+        /// </summary>
+        new public event EventHandler MouseEnter;
+        /// <summary>
+        /// Allows for the MouseLeave event to be given to the CardPictureBox
+        /// </summary>
+        new public event EventHandler MouseLeave;
 
         /// <summary>
         /// Gets or sets the playing card
@@ -104,10 +115,37 @@ namespace CardBox
             UpdateCard();
         }
 
+        /// <summary>
+        /// Calls the corresponding CardPictureBox Click method if it is set
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pbCardBox_Click(object sender, EventArgs e)
         {
             if (Click != null)
                 Click((sender as Control).Parent, e);
+        }
+
+        /// <summary>
+        /// Calls the corresponding CardPictureBox MouseEnter method if it is set
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void pbCardBox_MouseEnter(object sender, EventArgs e)
+        {
+            if (MouseEnter != null)
+                MouseEnter((sender as Control).Parent, e);
+        }
+
+        /// <summary>
+        /// Calls the corresponding CardPictureBox MouseLeave method if it is set
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void pbCardBox_MouseLeave(object sender, EventArgs e)
+        {
+            if (MouseLeave != null)
+                MouseLeave((sender as Control).Parent, e);
         }
     }
 }

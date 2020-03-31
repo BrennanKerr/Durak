@@ -12,7 +12,8 @@ namespace CardLibTester
             try
             {
                 //TestCardDealer();
-                TestCardDrawing(new CardDealer(20));
+                //TestCardDrawing(new CardDealer(20));
+                TestOperators();
             }
             catch (Exception e)
             {
@@ -20,6 +21,37 @@ namespace CardLibTester
             }
             Console.ReadKey();
         }
+
+        static void TestOperators()
+        {
+            Card.trumpsExist = true;
+            Console.WriteLine("Trump suit is " + Card.trumpSuit + "\nAces are " + Card.IsAceHigh);
+
+            Card card1 = new Card();
+            Card card2 = new Card(CardRank.Deuce, CardSuit.Diamonds);
+            Card card3 = new Card(CardRank.King, CardSuit.Spades);
+
+            Card jClubs = new Card(CardRank.Jack, CardSuit.Diamonds);
+            Card tenClubs = new Card(CardRank.Ten, CardSuit.Clubs);
+
+            Console.WriteLine(card1.ToString() + " " + (card1 > card2 ? ">" : "<") + " " + card2.ToString());
+            Console.WriteLine(card1.ToString() + " " + (card1 >= card2 ? ">=" : "<") + " " + card2.ToString());
+            Console.WriteLine(card1.ToString() + " " + (card1 < card2 ? "<" : ">") + " " + card2.ToString());
+            Console.WriteLine(card1.ToString() + " " + (card1 <= card2 ? "<=" : ">") + " " + card2.ToString());
+
+            Console.WriteLine("\n\n"+ card3.ToString() + " " + (card3 > card2 ? ">" : "<") + " " + card2.ToString());
+            Console.WriteLine(card3.ToString() + " " + (card3 >= card2 ? ">=" : "<") + " " + card2.ToString());
+            Console.WriteLine(card3.ToString() + " " + (card3 < card2 ? "<" : ">") + " " + card2.ToString());
+            Console.WriteLine(card3.ToString() + " " + (card3 <= card2 ? "<=" : ">") + " " + card2.ToString());
+
+            Console.WriteLine("\n\n" + card3.ToString() + " " + (card3 > card1 ? ">" : "<") + " " + card1.ToString());
+            Console.WriteLine(card3.ToString() + " " + (card3 >= card1 ? ">=" : "<") + " " + card1.ToString());
+            Console.WriteLine(card3.ToString() + " " + (card3 < card1 ? "<" : ">") + " " + card1.ToString());
+            Console.WriteLine(card3.ToString() + " " + (card3 <= card1 ? "<=" : ">") + " " + card1.ToString());
+
+            Console.WriteLine("\n\n" + jClubs.ToString() + " " + (jClubs > tenClubs ? ">" : "<") + " " + tenClubs.ToString());
+        }
+
         /// <summary>
         /// Tests the CardDealer controls
         /// </summary>
