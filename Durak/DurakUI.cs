@@ -50,6 +50,8 @@ namespace Durak
         {
             phcPlayer.PlayerName = "Player";
             phcPlayer.FaceUp = true;
+
+            
         }
 
         private void pbTrumpCard_Load(object sender, EventArgs e)
@@ -115,6 +117,8 @@ namespace Durak
                     // draws the next card and adds it to the appropriate hand
                     CardPictureBox cardBox = new CardPictureBox(dealer.GetNextCard());
                     cardBox.FaceUp = currentPanel.FaceUp;
+                    if (playerCount == 1)
+                        cardBox.Click += CardClick;
                     currentPanel.AddPlayingCard(cardBox);
                 }
             }
@@ -125,11 +129,12 @@ namespace Durak
 
         private void PanelClick(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Hello");
         }
+
         private void CardClick(object sender, EventArgs e)
         {
-            Close();
+            phcPlayer.RemovePlayingCard(sender as CardPictureBox);
         }
     }
 }

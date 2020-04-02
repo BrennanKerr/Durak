@@ -32,6 +32,7 @@ namespace PlayerHandControl
         /// Stores the face up value of the players hand
         /// </summary>
         private bool faceUpValue;
+
         public bool FaceUp
         { 
             get { return faceUpValue; }
@@ -232,7 +233,24 @@ namespace PlayerHandControl
 
         private void PlayerHandControl_Click(object sender, EventArgs e)
         {
-            Click(sender, e);
+            bool isClickedControl = false;
+
+            for (int i = 0; i < pnlHand.Controls.Count && !isClickedControl; i++)
+            {
+                CardPictureBox cbp = pnlHand.Controls[i] as CardPictureBox;
+
+                if (cbp != null)
+                {
+                    if (MousePosition.X >= cbp.Location.X && MousePosition.X <= (cbp.Location.X + cbp.Width))
+                    {
+                        if (MousePosition.Y >= cbp.Location.Y && MousePosition.Y <= (cbp.Location.Y + cbp.Height))
+                        {
+                            Click(cbp, e);
+                            isClickedControl = true;
+                        }
+                    }
+                }
+            }
         }
     }
 }
