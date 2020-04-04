@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Card.cs" />
     <Compile Include="CardDealer.cs" />
+    <Compile Include="CardDoesNotExistException.cs" />
     <Compile Include="CardList.cs" />
     <Compile Include="Deck.cs" />
     <Compile Include="CardOutOfRangeException.cs" />

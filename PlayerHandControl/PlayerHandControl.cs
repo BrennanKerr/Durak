@@ -231,16 +231,27 @@ namespace PlayerHandControl
             lblNumberOfCards.Top = 149;
         }
 
+        /// <summary>
+        /// Gets called when anywhere in the control gets clicked.
+        /// Determines if a card was clicked and if so, calls the corresponding click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PlayerHandControl_Click(object sender, EventArgs e)
         {
-            bool isClickedControl = false;
+            bool isClickedControl = false;  // determines if the card was found
 
-            for (int i = 0; i < pnlHand.Controls.Count && !isClickedControl; i++)
+            // runs through each control in the panel
+            for (int controlCount = 0; controlCount < pnlHand.Controls.Count && !isClickedControl; controlCount++)
             {
-                CardPictureBox cbp = pnlHand.Controls[i] as CardPictureBox;
+                // attemps to convert the control to a CardPictureBox
+                CardPictureBox cbp = pnlHand.Controls[controlCount] as CardPictureBox;
 
+                // if the control was converted
                 if (cbp != null)
                 {
+                    // if the mouse is within the card box location,
+                        // fire the given cards event and set isClickecControl to true
                     if (MousePosition.X >= cbp.Location.X && MousePosition.X <= (cbp.Location.X + cbp.Width))
                     {
                         if (MousePosition.Y >= cbp.Location.Y && MousePosition.Y <= (cbp.Location.Y + cbp.Height))
@@ -251,6 +262,16 @@ namespace PlayerHandControl
                     }
                 }
             }
+        }
+
+        /// <summary>
+        /// Removes all cards from the players hand
+        /// </summary>
+        public void ResetHand()
+        {
+            myPlayer.RemoveCards();
+            pnlHand.Controls.Clear();
+            lblNumberOfCards.Text = "0";
         }
     }
 }

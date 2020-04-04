@@ -35,14 +35,16 @@
             this.pnlAttackCards = new System.Windows.Forms.Panel();
             this.pnlDefendCards = new System.Windows.Forms.Panel();
             this.lblCardsRemaining = new System.Windows.Forms.Label();
+            this.btnReset = new System.Windows.Forms.Button();
             this.phcComputer = new PlayerHandControl.PlayerHandControl();
             this.phcPlayer = new PlayerHandControl.PlayerHandControl();
+            this.btnFinishTurn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbTrumpCard)).BeginInit();
             this.SuspendLayout();
             // 
             // pbTrumpCard
             // 
-            this.pbTrumpCard.Location = new System.Drawing.Point(122, 300);
+            this.pbTrumpCard.Location = new System.Drawing.Point(26, 299);
             this.pbTrumpCard.Name = "pbTrumpCard";
             this.pbTrumpCard.Size = new System.Drawing.Size(100, 50);
             this.pbTrumpCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -52,7 +54,7 @@
             // cpbDeck
             // 
             this.cpbDeck.FaceUp = false;
-            this.cpbDeck.Location = new System.Drawing.Point(108, 253);
+            this.cpbDeck.Location = new System.Drawing.Point(12, 252);
             this.cpbDeck.MaximumSize = new System.Drawing.Size(86, 132);
             this.cpbDeck.MinimumSize = new System.Drawing.Size(86, 132);
             this.cpbDeck.Name = "cpbDeck";
@@ -80,11 +82,21 @@
             // 
             this.lblCardsRemaining.AutoSize = true;
             this.lblCardsRemaining.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
-            this.lblCardsRemaining.Location = new System.Drawing.Point(117, 221);
+            this.lblCardsRemaining.Location = new System.Drawing.Point(21, 220);
             this.lblCardsRemaining.Name = "lblCardsRemaining";
             this.lblCardsRemaining.Size = new System.Drawing.Size(26, 29);
             this.lblCardsRemaining.TabIndex = 7;
             this.lblCardsRemaining.Text = "#";
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(12, 401);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.TabIndex = 8;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // phcComputer
             // 
@@ -108,6 +120,17 @@
             this.phcPlayer.PlayerName = null;
             this.phcPlayer.Size = new System.Drawing.Size(1000, 166);
             this.phcPlayer.TabIndex = 0;
+            this.phcPlayer.Load += new System.EventHandler(this.phcPlayer_Load);
+            // 
+            // btnFinishTurn
+            // 
+            this.btnFinishTurn.Location = new System.Drawing.Point(764, 371);
+            this.btnFinishTurn.Name = "btnFinishTurn";
+            this.btnFinishTurn.Size = new System.Drawing.Size(75, 23);
+            this.btnFinishTurn.TabIndex = 9;
+            this.btnFinishTurn.Text = "Finish Turn";
+            this.btnFinishTurn.UseVisualStyleBackColor = true;
+            this.btnFinishTurn.Click += new System.EventHandler(this.btnFinishTurn_Click);
             // 
             // DurakUI
             // 
@@ -115,6 +138,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1247, 635);
+            this.Controls.Add(this.btnFinishTurn);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.lblCardsRemaining);
             this.Controls.Add(this.pnlDefendCards);
             this.Controls.Add(this.pnlAttackCards);
@@ -125,7 +150,6 @@
             this.Name = "DurakUI";
             this.Text = "Durak";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.Click += new System.EventHandler(this.cpbDeck_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pbTrumpCard)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -141,6 +165,8 @@
         private System.Windows.Forms.Panel pnlAttackCards;
         private System.Windows.Forms.Panel pnlDefendCards;
         private System.Windows.Forms.Label lblCardsRemaining;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnFinishTurn;
     }
 }
 
