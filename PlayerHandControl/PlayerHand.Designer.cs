@@ -1,6 +1,6 @@
 ﻿namespace PlayerHandControl
 {
-    partial class PlayerHandControl
+    partial class PlayerHand
     {
         /// <summary>
         /// Required designer variable.

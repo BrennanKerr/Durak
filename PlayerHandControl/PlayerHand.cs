@@ -21,7 +21,7 @@ namespace PlayerHandControl
     /// <summary>
     /// Controls allows the displaying of a players cards in hand
     /// </summary>
-    public partial class PlayerHandControl: UserControl
+    public partial class PlayerHand: UserControl
     {
         /// <summary>
         /// The player whose hand the panel controls
@@ -66,7 +66,7 @@ namespace PlayerHandControl
         /// <summary>
         /// Initializes the PlayerHand Control
         /// </summary>
-        public PlayerHandControl()
+        public PlayerHand()
         {
             InitializeComponent();
             myPlayer = new Player();
@@ -78,7 +78,7 @@ namespace PlayerHandControl
         /// Initializes the PlayerHandControl with a predefined player
         /// </summary>
         /// <param name="player"></param>
-        public PlayerHandControl(Player player)
+        public PlayerHand(Player player)
         {
             InitializeComponent();
             myPlayer = player;
@@ -163,12 +163,6 @@ namespace PlayerHandControl
                     pnlHand.Controls[count].Left = startingLocation + (seperation * count);
                 }
             }
-            /*for (int i = 0; i < numberOfCards; i++)
-            {
-                Control card = pnlHand.Controls[i];
-                card.Top = 0;
-                card.Left = 100 * i;
-            }*/
         }
 
         /// <summary>

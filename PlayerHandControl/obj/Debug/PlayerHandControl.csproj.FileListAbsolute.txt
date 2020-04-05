@@ -8,7 +8,7 @@ D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerHandContro
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.csproj.CopyComplete
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.dll
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.pdb
-D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.PlayerHandControl.resources
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.csproj.GenerateResource.cache
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerHandControl\bin\Debug\PlayerLib.dll
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerHandControl\bin\Debug\PlayerLib.pdb
+D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.PlayerHand.resources

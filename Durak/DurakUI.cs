@@ -104,16 +104,16 @@ namespace Durak
         /// </summary>
         private void DisperseCards()
         {
-            int numberOfPlayers = Controls.OfType<PlayerHandControl.PlayerHandControl>().Count();
+            int numberOfPlayers = Controls.OfType<PlayerHandControl.PlayerHand>().Count();
             // saves each player hand control to an array
-            PlayerHandControl.PlayerHandControl[] panels = new PlayerHandControl.PlayerHandControl[numberOfPlayers];
+            PlayerHandControl.PlayerHand[] panels = new PlayerHandControl.PlayerHand[numberOfPlayers];
             panels[0] = phcComputer;
             panels[1] = phcPlayer;
 
             // runs through each hand
             for (int playerCount = 0; playerCount < numberOfPlayers; playerCount++)
             {
-                PlayerHandControl.PlayerHandControl currentPanel = panels[playerCount];
+                PlayerHandControl.PlayerHand currentPanel = panels[playerCount];
 
                 // runs until the player reachers the required number of cards
                 for (int count = currentPanel.PlayerInformation.CardsRemaining(); count < MINIMUM_NUMBER_OF_CARDS; count++)
@@ -143,16 +143,45 @@ namespace Durak
                 CardPictureBox cpb = sender as CardPictureBox;
                 if (cpb != null)
                 {
-                    phcPlayer.RemovePlayingCard(sender as CardPictureBox);
-                    if (currentlyAttacking)
-                        pnlAttackCards.Controls.Add(cpb);
-                    else
-                        pnlDefendCards.Controls.Add(cpb);
+                    cpb.Size = new Size(CardPictureBox.cardSize.Width / 2, CardPictureBox.cardSize.Height / 2);
+                    try
+                    {
+                        phcPlayer.RemovePlayingCard(cpb);
+
+                        if (currentlyAttacking)
+                        {
+                            pnlAttackCards.Controls.Add(cpb);
+                            SetLocation(pnlAttackCards);
+                        }
+                        else
+                        {
+                            pnlDefendCards.Controls.Add(cpb);
+                            SetLocation(pnlDefendCards);
+                        }
+                    }
+                    catch (CardDoesNotExistException ex)
+                    {
+                        MessageBox.Show(ex.Message + ". Please select another card!", "Invalid Operation");
+                    }
                 }
             }
             else
             {
                 MessageBox.Show("It is not your turn. Please wait until the other plays", "Unable to play");
+            }
+        }
+
+        private void SetLocation(Panel ph)
+        {
+            int numberOfControls = ph.Controls.Count;
+            for (int count = 0; count < numberOfControls; count++)
+            {
+                CardPictureBox cpb = ph.Controls[count] as CardPictureBox;
+
+                if (cpb != null)
+                {
+                    cpb.Location = new Point(count * CardPictureBox.cardSize.Width / 2, 0);
+                }
             }
         }
 
@@ -200,10 +229,16 @@ namespace Durak
             if (currentlyAttacking)
             {
                 // AI Attack Logic Will go here
+                
             }
             else
             {
                 // AI Defend Logic will go here
+                foreach (Control control in pnlAttackCards.Controls)
+                {
+                    CardPictureBox cpb = control as CardPictureBox;
+                    
+                }
             }
         }
     }

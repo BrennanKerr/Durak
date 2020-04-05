@@ -51,7 +51,17 @@ namespace PlayerLib
         /// Removes a certain card from the hand
         /// </summary>
         /// <param name="oldCard">the specic card to be removed</param>
-        public void Remove(Card oldCard) { myCards.Remove(oldCard); }
+        public void Remove(Card oldCard) 
+        {
+            try
+            {
+                myCards.Remove(oldCard);
+            }
+            catch (CardDoesNotExistException ex)
+            {
+                throw ex;
+            }
+        }
         /// <summary>
         /// Checks if a certain card is in the hand
         /// </summary>
@@ -73,7 +83,11 @@ namespace PlayerLib
         public Card DrawCard(int index)
         {
             Card drawnCard = myCards[index];
-            myCards.Remove(drawnCard);
+            try
+            {
+                myCards.Remove(drawnCard);
+            }
+            catch (CardDoesNotExistException ex) { throw ex; }
             return drawnCard;
         }
 

@@ -82,9 +82,9 @@ namespace CardLib
                 dealerCards.Clear();
             
             // determine the starting index
-            if (numberOfCards == 20) startingRank = 10;
-            else if (numberOfCards == 36) startingRank = 6;
-            else startingRank = 2;
+            if (numberOfCards == DECK_SIZES[0]) startingRank = (int)CardRank.Ten;
+            else if (numberOfCards == DECK_SIZES[1]) startingRank = (int)CardRank.Six;
+            else startingRank = (int)CardRank.Deuce;
 
             // obtain the certain number of cards
             for (int suitCount = 0; suitCount < 4; suitCount++)

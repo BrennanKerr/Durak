@@ -36,8 +36,8 @@
             this.pnlDefendCards = new System.Windows.Forms.Panel();
             this.lblCardsRemaining = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
-            this.phcComputer = new PlayerHandControl.PlayerHandControl();
-            this.phcPlayer = new PlayerHandControl.PlayerHandControl();
+            this.phcComputer = new PlayerHandControl.PlayerHand();
+            this.phcPlayer = new PlayerHandControl.PlayerHand();
             this.btnFinishTurn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbTrumpCard)).BeginInit();
             this.SuspendLayout();
@@ -124,7 +124,7 @@
             // 
             // btnFinishTurn
             // 
-            this.btnFinishTurn.Location = new System.Drawing.Point(764, 371);
+            this.btnFinishTurn.Location = new System.Drawing.Point(824, 370);
             this.btnFinishTurn.Name = "btnFinishTurn";
             this.btnFinishTurn.Size = new System.Drawing.Size(75, 23);
             this.btnFinishTurn.TabIndex = 9;
@@ -158,8 +158,8 @@
 
         #endregion
 
-        private PlayerHandControl.PlayerHandControl phcPlayer;
-        private PlayerHandControl.PlayerHandControl phcComputer;
+        private PlayerHandControl.PlayerHand phcPlayer;
+        private PlayerHandControl.PlayerHand phcComputer;
         private System.Windows.Forms.PictureBox pbTrumpCard;
         private CardBox.CardPictureBox cpbDeck;
         private System.Windows.Forms.Panel pnlAttackCards;

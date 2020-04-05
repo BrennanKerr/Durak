@@ -97,15 +97,33 @@ namespace CardLib
         }
         #endregion
         #region OPERATORS
+        /// <summary>
+        /// Checks if the two cards match
+        /// </summary>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <returns></returns>
         public static bool operator ==(Card left, Card right)
         {
-            return (left.Rank == right.Rank);
+            return (left.GetHashCode() == right.GetHashCode());
         }
+        /// <summary>
+        /// Checks if the two cards dont match
+        /// </summary>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <returns></returns>
         public static bool operator !=(Card left, Card right)
         {
             return !(left == right);
         }
 
+        /// <summary>
+        /// Checks if the card on the left is higher than the card on the right
+        /// </summary>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <returns></returns>
         public static bool operator >(Card left, Card right)
         {
             bool returnValue;
@@ -132,6 +150,12 @@ namespace CardLib
             return returnValue;
         }
 
+        /// <summary>
+        /// Checks if the card on the left is greater than or equal to the card on the right
+        /// </summary>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <returns></returns>
         public static bool operator >=(Card left, Card right)
         {
             bool returnValue = (left > right);
@@ -143,33 +167,57 @@ namespace CardLib
             return returnValue;
         }
 
+        /// <summary>
+        /// Checks if the card on the left is less than the card on the right
+        /// </summary>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <returns></returns>
         public static bool operator <(Card left, Card right)
         {
-            return !(left >= right);
+            return right >= left;
         }
-
+        /// <summary>
+        /// Checks if the card on the left is less than or equal to the one on the right
+        /// </summary>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <returns></returns>
         public static bool operator <=(Card left, Card right)
         {
-            return !(left > right);
+            return right > left;
         }
 
+        /// <summary>
+        /// Checks if the two cards are equal
+        /// </summary>
+        /// <param name="card"></param>
+        /// <returns></returns>
         public override bool Equals(object card)
         {
             return this == (Card)card;
         }
 
+        /// <summary>
+        /// Retrieve a unique has for each card
+        /// </summary>
+        /// <returns>the hash</returns>
         public override int GetHashCode()
         {
             // sets the initial hash
             int hash = 13 * (int)mySuit;
 
+            // if the rank is an ace
             if (myRank == CardRank.Ace)
             {
+                // if ace is high, add the corresponding value
                 if (IsAceHigh)
                     hash += (int)myRank;
+                // otherwise, add 1
                 else
                     hash += 1;
             }
+            // otherwise, add the rank value
             else
                 hash += (int)myRank;
 

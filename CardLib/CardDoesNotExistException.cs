@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CardLib
 {
-    class CardDoesNotExistException : Exception
+    public class CardDoesNotExistException : Exception
     {
         /// <summary>
         /// the card as a string
@@ -18,7 +18,7 @@ namespace CardLib
         /// </summary>
         /// <param name="message">the error message to display</param>
         /// <param name="card">the card as a string</param>
-        public CardDoesNotExistException(string message = "The selected card does not exist", string card= "No card Selected")
+        public CardDoesNotExistException(string message = "The selected card does not exist", string card= "No card Selected") : base(message)
         {
             cardString = card;  // saves the card string
         }
@@ -29,7 +29,7 @@ namespace CardLib
         /// </summary>
         /// <param name="message">the error message</param>
         /// <param name="card">the card</param>
-        public CardDoesNotExistException(string message, Card card) : base(card.ToString())
+        public CardDoesNotExistException(string message, Card card) : this(message, card.ToString())
         {  }
 
         /// <summary>
