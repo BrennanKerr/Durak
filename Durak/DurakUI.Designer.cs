@@ -66,14 +66,14 @@
             // 
             // pnlAttackCards
             // 
-            this.pnlAttackCards.Location = new System.Drawing.Point(279, 329);
+            this.pnlAttackCards.Location = new System.Drawing.Point(173, 316);
             this.pnlAttackCards.Name = "pnlAttackCards";
             this.pnlAttackCards.Size = new System.Drawing.Size(438, 135);
             this.pnlAttackCards.TabIndex = 5;
             // 
             // pnlDefendCards
             // 
-            this.pnlDefendCards.Location = new System.Drawing.Point(461, 229);
+            this.pnlDefendCards.Location = new System.Drawing.Point(617, 197);
             this.pnlDefendCards.Name = "pnlDefendCards";
             this.pnlDefendCards.Size = new System.Drawing.Size(438, 135);
             this.pnlDefendCards.TabIndex = 6;

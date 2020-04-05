@@ -108,27 +108,34 @@ namespace Durak
         {
             if (pnlAttackCards.Controls.Count == 0 && pnlDefendCards.Controls.Count == 0)
             {
-                int numberOfPlayers = Controls.OfType<PlayerHandControl.PlayerHand>().Count();
-                // saves each player hand control to an array
-                PlayerHand[] panels = new PlayerHandControl.PlayerHand[numberOfPlayers];
-                panels[0] = phcComputer;
-                panels[1] = phcPlayer;
-
-                // runs through each hand
-                for (int playerCount = 0; playerCount < numberOfPlayers; playerCount++)
+                if (dealer.CurrentCardIndex > 0)
                 {
-                    PlayerHand currentPanel = panels[playerCount];
+                    int numberOfPlayers = Controls.OfType<PlayerHandControl.PlayerHand>().Count();
+                    // saves each player hand control to an array
+                    PlayerHand[] panels = new PlayerHandControl.PlayerHand[numberOfPlayers];
+                    panels[0] = phcComputer;
+                    panels[1] = phcPlayer;
 
-                    // runs until the player reachers the required number of cards
-                    for (int count = currentPanel.PlayerInformation.CardsRemaining(); count < MINIMUM_NUMBER_OF_CARDS; count++)
+                    // runs through each hand
+                    for (int playerCount = 0; playerCount < numberOfPlayers; playerCount++)
                     {
-                        // draws the next card and adds it to the appropriate hand
-                        CardPictureBox cardBox = new CardPictureBox(dealer.GetNextCard());
-                        cardBox.FaceUp = currentPanel.FaceUp;
-                        if (playerCount == 1)
-                            cardBox.Click += CardClick;
-                        currentPanel.AddPlayingCard(cardBox);
+                        PlayerHand currentPanel = panels[playerCount];
+
+                        // runs until the player reachers the required number of cards
+                        for (int count = currentPanel.PlayerInformation.CardsRemaining(); count < MINIMUM_NUMBER_OF_CARDS; count++)
+                        {
+                            // draws the next card and adds it to the appropriate hand
+                            CardPictureBox cardBox = new CardPictureBox(dealer.GetNextCard());
+                            cardBox.FaceUp = currentPanel.FaceUp;
+                            if (playerCount == 1)
+                                cardBox.Click += CardClick;
+                            currentPanel.AddPlayingCard(cardBox);
+                        }
                     }
+                }
+                else
+                {
+                    
                 }
 
                 // updates the cards remaining label
@@ -153,30 +160,50 @@ namespace Durak
                 if (cpb != null)
                 {
                     cpb.Size = new Size(CardPictureBox.cardSize.Width / 2, CardPictureBox.cardSize.Height / 2);
-                    try
+                    if (currentlyAttacking)
                     {
-                        phcPlayer.RemovePlayingCard(cpb);
-
-                        if (currentlyAttacking)
-                        {
-                            pnlAttackCards.Controls.Add(cpb);
-                            SetLocation(pnlAttackCards);
-                        }
-                        else
-                        {
-                            pnlDefendCards.Controls.Add(cpb);
-                            SetLocation(pnlDefendCards);
-                        }
+                        MovePlayingCard(phcPlayer, pnlAttackCards, cpb);
                     }
-                    catch (CardDoesNotExistException ex)
+                    else
                     {
-                        MessageBox.Show(ex.Message + ". Please select another card!", "Invalid Operation");
+                        MovePlayingCard(phcPlayer, pnlDefendCards, cpb);
                     }
                 }
             }
             else
             {
                 MessageBox.Show("It is not your turn. Please wait until the other plays", "Unable to play");
+            }
+        }
+
+        private void MovePlayingCard(PlayerHand phc, Panel pnl, CardPictureBox cpb)
+        {
+            bool canPlayCard = true;
+
+            if (pnl.Controls.Count > 0)
+            {
+                if (cpb.PlayingCard.Rank != ((CardPictureBox)pnl.Controls[0]).PlayingCard.Rank)
+                {
+                    canPlayCard = false;
+                }
+            }
+
+            if (canPlayCard)
+            {
+                try
+                {
+                    phc.RemovePlayingCard(cpb);
+                    pnl.Controls.Add(cpb);
+                    SetLocation(pnl);
+                }
+                catch (CardDoesNotExistException ex)
+                {
+                    MessageBox.Show(ex.Message + ". Please select another card!", "Invalid Operation");
+                }
+            }
+            else
+            {
+                MessageBox.Show("You cannot play that card. Must be a rank of " + ((CardPictureBox)pnl.Controls[0]).PlayingCard.Rank, "Invalid Move!");
             }
         }
 
@@ -214,6 +241,7 @@ namespace Durak
                 phcPlayer.ResetHand();
                 phcComputer.ResetHand();
 
+                // removes any cards from the panels
                 pnlAttackCards.Controls.Clear();
                 pnlDefendCards.Controls.Clear();
 
@@ -235,8 +263,10 @@ namespace Durak
         {
             // flips the attack boolean
             currentlyAttacking = !currentlyAttacking;
+            currentPlayer = 0;
 
             int numberOfCards = phcComputer.PlayerInformation.CardsRemaining();
+            int startingIndex = 0;
 
             if (currentlyAttacking)
             {
@@ -260,7 +290,7 @@ namespace Durak
                         bool cardPlayed = false;    // determines if a card has been played
 
                         // run through each card in the ais hand
-                        for (int count = 0; count < numberOfCards && !cardPlayed; count++)
+                        for (int count = startingIndex; count < numberOfCards && !cardPlayed; count++)
                         {
                             try
                             {
@@ -277,6 +307,7 @@ namespace Durak
                             {
                                 MessageBox.Show(ex.Message, "An Error Occured");
                             }
+                            startingIndex++;
                         }
                     }    
                 }
@@ -296,6 +327,10 @@ namespace Durak
                 else
                 {
                     MessageBox.Show("Unable to Defend. Player wins round!");
+                    foreach (Control control in pnlAttackCards.Controls)
+                    {
+                        phcComputer.AddPlayingCard(control as CardPictureBox);
+                    }
                 }
             }
 
@@ -306,6 +341,8 @@ namespace Durak
 
         private void NextTurn(object sender, EventArgs e)
         {
+            currentPlayer = 1;
+
             pnlAttackCards.Controls.Clear();
             pnlDefendCards.Controls.Clear();
 
