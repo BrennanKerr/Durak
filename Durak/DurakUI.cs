@@ -3,6 +3,7 @@
  * 
  * Author: Group 1
  * Since: March 30, 2020
+ * 
  */
 
 using System;
@@ -11,7 +12,6 @@ using System.Drawing;
 using System.Windows.Forms;
 using CardLib;
 using CardBox;
-using PlayerLib;
 using PlayerHandControl;
 using System.Collections.Generic;
 
@@ -22,16 +22,18 @@ namespace Durak
         const int MINIMUM_NUMBER_OF_CARDS = 6;  // the minimum number of cards in a players hand at the end of each round
         CardDealer dealer;                      // the dealer object that will disperse the cards
         int currentPlayer;                      // the player whos currently up
-        bool currentlyAttacking;                // states if the player is supposed to be attacking (true) or defendng (false)
+        bool playerAttacking;                   // states if the player is supposed to be attacking (true) or defendng (false)
 
-
+        /// <summary>
+        /// Loads the main form
+        /// </summary>
         public DurakUI()
         {
             InitializeComponent();
             dealer = new CardDealer(36);
             lblCardsRemaining.Text = (dealer.NumberOfCards).ToString();
             Card.trumpsExist = true;
-            currentlyAttacking = true;
+            playerAttacking = true;
             currentPlayer = 1;
         }
 
@@ -106,10 +108,13 @@ namespace Durak
         /// </summary>
         private void DisperseCards()
         {
+            // if the atttack and defend panels are empty
             if (pnlAttackCards.Controls.Count == 0 && pnlDefendCards.Controls.Count == 0)
             {
-                if (dealer.CurrentCardIndex > 0)
+                // if cards are able to be used
+                if (dealer.CurrentCardIndex < dealer.NumberOfCards)
                 {
+                    bool cardsLeft = true;
                     int numberOfPlayers = Controls.OfType<PlayerHandControl.PlayerHand>().Count();
                     // saves each player hand control to an array
                     PlayerHand[] panels = new PlayerHandControl.PlayerHand[numberOfPlayers];
@@ -117,12 +122,12 @@ namespace Durak
                     panels[1] = phcPlayer;
 
                     // runs through each hand
-                    for (int playerCount = 0; playerCount < numberOfPlayers; playerCount++)
+                    for (int playerCount = 0; playerCount < numberOfPlayers && cardsLeft; playerCount++)
                     {
                         PlayerHand currentPanel = panels[playerCount];
 
                         // runs until the player reachers the required number of cards
-                        for (int count = currentPanel.PlayerInformation.CardsRemaining(); count < MINIMUM_NUMBER_OF_CARDS; count++)
+                        for (int count = currentPanel.PlayerInformation.CardsRemaining(); count < MINIMUM_NUMBER_OF_CARDS && cardsLeft; count++)
                         {
                             // draws the next card and adds it to the appropriate hand
                             CardPictureBox cardBox = new CardPictureBox(dealer.GetNextCard());
@@ -130,20 +135,25 @@ namespace Durak
                             if (playerCount == 1)
                                 cardBox.Click += CardClick;
                             currentPanel.AddPlayingCard(cardBox);
+
+                            if (dealer.CurrentCardIndex >= dealer.NumberOfCards)
+                                cardsLeft = false;
                         }
                     }
                 }
+                // otherwise
                 else
                 {
-                    
+                    MessageBox.Show("There are no cards remaining", "No Cards");
                 }
 
                 // updates the cards remaining label
                 lblCardsRemaining.Text = (dealer.NumberOfCards - dealer.CurrentCardIndex).ToString();
             }
+            // otherwise the round is still in play
             else
             {
-                MessageBox.Show("You cant draw as you are currently in the middle of a round!");
+                MessageBox.Show("You cant draw as you are currently in the middle of a round!", "Invalid Operation");
             }
         }
 
@@ -154,66 +164,94 @@ namespace Durak
         /// <param name="e"></param>
         private void CardClick(object sender, EventArgs e)
         {
+            // if its the player's turn to go
             if (currentPlayer == 1)
             {
+                // convert the object to a card box
                 CardPictureBox cpb = sender as CardPictureBox;
+
+                // if the conversion was successful
                 if (cpb != null)
                 {
+                    // set the size of the cardbox
                     cpb.Size = new Size(CardPictureBox.cardSize.Width / 2, CardPictureBox.cardSize.Height / 2);
-                    if (currentlyAttacking)
+
+                    // if the player is attacking
+                    if (playerAttacking)
                     {
                         MovePlayingCard(phcPlayer, pnlAttackCards, cpb);
                     }
+                    // otherwise the player is defending
                     else
                     {
                         MovePlayingCard(phcPlayer, pnlDefendCards, cpb);
                     }
                 }
             }
+            // other, the player cannot play
             else
             {
                 MessageBox.Show("It is not your turn. Please wait until the other plays", "Unable to play");
             }
         }
 
+        /// <summary>
+        /// Attempts to move the given CardPictureBox to the given panel
+        /// </summary>
+        /// <param name="phc">the PlayerHand control that the card should be in</param>
+        /// <param name="pnl">the panel the CardPictureBox will be moved to</param>
+        /// <param name="cpb">the CardPictureBox that will be moved</param>
         private void MovePlayingCard(PlayerHand phc, Panel pnl, CardPictureBox cpb)
         {
-            bool canPlayCard = true;
+            bool canPlayCard = true;    // determines if the given card can be played
 
+            // determines if any cards are in the panel
             if (pnl.Controls.Count > 0)
             {
+                // determines if the card is not the same rank 
                 if (cpb.PlayingCard.Rank != ((CardPictureBox)pnl.Controls[0]).PlayingCard.Rank)
                 {
                     canPlayCard = false;
                 }
             }
 
+            // if the card can be played
             if (canPlayCard)
             {
+                // try to move the card
                 try
                 {
                     phc.RemovePlayingCard(cpb);
                     pnl.Controls.Add(cpb);
                     SetLocation(pnl);
                 }
+                // if the card does not exist
                 catch (CardDoesNotExistException ex)
                 {
                     MessageBox.Show(ex.Message + ". Please select another card!", "Invalid Operation");
                 }
             }
+            // otherwise, the card cannot be played
             else
             {
                 MessageBox.Show("You cannot play that card. Must be a rank of " + ((CardPictureBox)pnl.Controls[0]).PlayingCard.Rank, "Invalid Move!");
             }
         }
 
+        /// <summary>
+        /// Set the location of the cards in the panel
+        /// </summary>
+        /// <param name="ph"></param>
         private void SetLocation(Panel ph)
         {
-            int numberOfControls = ph.Controls.Count;
+            int numberOfControls = ph.Controls.Count;   // saves the number of cards
+            // run through each control
             for (int count = 0; count < numberOfControls; count++)
             {
+                // attempt to convert it to a CardPictureBox
                 CardPictureBox cpb = ph.Controls[count] as CardPictureBox;
 
+                // if the control was converted, set the location
                 if (cpb != null)
                 {
                     cpb.Location = new Point(count * CardPictureBox.cardSize.Width / 2, 0);
@@ -249,6 +287,11 @@ namespace Durak
             }
         }
 
+        /// <summary>
+        /// Handles the Reset button click event and resets the game
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReset_Click(object sender, EventArgs e)
         {
             ResetLayout();
@@ -261,14 +304,12 @@ namespace Durak
         /// <param name="e"></param>
         private void btnFinishTurn_Click(object sender, EventArgs e)
         {
-            // flips the attack boolean
-            currentlyAttacking = !currentlyAttacking;
             currentPlayer = 0;
 
             int numberOfCards = phcComputer.PlayerInformation.CardsRemaining();
             int startingIndex = 0;
 
-            if (currentlyAttacking)
+            if (!playerAttacking)
             {
                 // AI Attack Logic Will go here
                 
@@ -326,19 +367,31 @@ namespace Durak
                 // else, state they have lost
                 else
                 {
-                    MessageBox.Show("Unable to Defend. Player wins round!");
+                    MessageBox.Show("Unable to Defend. Player wins round!", pnlAttackCards.Controls.Count.ToString());
                     foreach (Control control in pnlAttackCards.Controls)
                     {
+                        MessageBox.Show((control as CardPictureBox).PlayingCard.ToString());
                         phcComputer.AddPlayingCard(control as CardPictureBox);
                     }
+
+                    pnlAttackCards.Controls.Clear();
                 }
             }
 
             btnFinishTurn.Text = "Next Turn";
             btnFinishTurn.Click -= btnFinishTurn_Click;
             btnFinishTurn.Click += NextTurn;
+
+            // flips the attack boolean
+            playerAttacking = !playerAttacking;
         }
 
+
+        /// <summary>
+        /// Handles btnFinishTurn if the player has already played
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextTurn(object sender, EventArgs e)
         {
             currentPlayer = 1;
