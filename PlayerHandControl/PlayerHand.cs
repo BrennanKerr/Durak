@@ -267,5 +267,23 @@ namespace PlayerHandControl
             pnlHand.Controls.Clear();
             lblNumberOfCards.Text = "0";
         }
+
+        public CardPictureBox RetrieveCardBox(int index)
+        {
+            CardPictureBox cpb;
+
+            if (index < pnlHand.Controls.Count)
+            {
+                cpb = pnlHand.Controls[index] as CardPictureBox;;
+                if (cpb == null)
+                    throw new InvalidCastException("The control at {0} cannot be fully converted to a CardPictureBox", index);
+            }
+            else
+            {
+                throw new IndexOutOfRangeException("There is no Control at the index of " + index);
+            }
+
+            return cpb;
+        }
     }
 }
