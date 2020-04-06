@@ -115,9 +115,9 @@ namespace Durak
                 if (dealer.CurrentCardIndex < dealer.NumberOfCards)
                 {
                     bool cardsLeft = true;
-                    int numberOfPlayers = Controls.OfType<PlayerHandControl.PlayerHand>().Count();
+                    int numberOfPlayers = Controls.OfType<PlayerHand>().Count();
                     // saves each player hand control to an array
-                    PlayerHand[] panels = new PlayerHandControl.PlayerHand[numberOfPlayers];
+                    PlayerHand[] panels = new PlayerHand[numberOfPlayers];
                     panels[0] = phcComputer;
                     panels[1] = phcPlayer;
 
@@ -179,12 +179,22 @@ namespace Durak
                     // if the player is attacking
                     if (playerAttacking)
                     {
-                        MovePlayingCard(phcPlayer, pnlAttackCards, cpb);
+                        if (CheckAttackCard(cpb.PlayingCard))
+                        {
+                            MovePlayingCard(phcPlayer, pnlAttackCards, cpb);
+                            AI_Logic();
+                        }
                     }
                     // otherwise the player is defending
                     else
                     {
-                        MovePlayingCard(phcPlayer, pnlDefendCards, cpb);
+                        if (CheckDefendCard(cpb.PlayingCard))
+                        {
+                            MovePlayingCard(phcPlayer, pnlDefendCards, cpb);
+                            AI_Logic();
+                        }
+                        else
+                            MessageBox.Show("The card must be higher than the last played card");
                     }
                 }
             }
@@ -203,7 +213,19 @@ namespace Durak
         /// <param name="cpb">the CardPictureBox that will be moved</param>
         private void MovePlayingCard(PlayerHand phc, Panel pnl, CardPictureBox cpb)
         {
-            bool canPlayCard = true;    // determines if the given card can be played
+            // try to move the card
+            try
+            {
+                phc.RemovePlayingCard(cpb);
+                pnl.Controls.Add(cpb);
+                SetLocation(pnl);
+            }
+            // if the card does not exist
+            catch (CardDoesNotExistException ex)
+            {
+                MessageBox.Show(ex.Message + ". Please select another card!", "Invalid Operation");
+            }
+            /*bool canPlayCard = true;    // determines if the given card can be played
 
             // determines if any cards are in the panel
             if (pnl.Controls.Count > 0)
@@ -235,7 +257,7 @@ namespace Durak
             else
             {
                 MessageBox.Show("You cannot play that card. Must be a rank of " + ((CardPictureBox)pnl.Controls[0]).PlayingCard.Rank, "Invalid Move!");
-            }
+            }*/
         }
 
         /// <summary>
@@ -304,18 +326,124 @@ namespace Durak
         /// <param name="e"></param>
         private void btnFinishTurn_Click(object sender, EventArgs e)
         {
-            currentPlayer = 0;
 
+
+            /* currentPlayer = 0;
+
+             int numberOfCards = phcComputer.PlayerInformation.CardsRemaining();
+             int startingIndex = 0;
+
+             if (!playerAttacking)
+             {
+                 // AI Attack Logic Will go here
+
+             }
+             else
+             {// stores the list of cards the AI will play
+                 List<CardPictureBox> boxes = new List<CardPictureBox>();
+
+                 // run through each card in the attack hand
+                 foreach (Control control in pnlAttackCards.Controls)
+                 {
+                     // save the current control as a cardpicturebox
+                     CardPictureBox cpb = control as CardPictureBox;
+
+                     // if it can be converted
+                     if (cpb != null)
+                     {
+                         bool cardPlayed = false;    // determines if a card has been played
+
+                         // run through each card in the ais hand
+                         for (int count = startingIndex; count < numberOfCards && !cardPlayed; count++)
+                         {
+                             try
+                             {
+                                 // save the current cardPictureBox
+                                 CardPictureBox currentCard = phcComputer.RetrieveCardBox(count);
+                                 // if it is better than the current card in the attack panel, play it
+                                 if (currentCard.PlayingCard > cpb.PlayingCard)
+                                 {
+                                     cardPlayed = true;
+                                     boxes.Add(currentCard);
+                                 }
+                             }
+                             catch (Exception ex)
+                             {
+                                 MessageBox.Show(ex.Message, "An Error Occured");
+                             }
+                             startingIndex++;
+                         }
+                     }
+                 }
+
+                 // if the same number of cards have been played
+                 // display them on the panel and remove them from the computers hand
+                 if (boxes.Count == pnlAttackCards.Controls.Count)
+                 {
+                     foreach (CardPictureBox card in boxes)
+                     {
+                         phcComputer.RemovePlayingCard(card);
+                         pnlDefendCards.Controls.Add(card);
+                     }
+                     SetLocation(pnlDefendCards);
+                 }
+                 // else, state they have lost
+                 else
+                 {
+                     MessageBox.Show("Unable to Defend. Player wins round!", pnlAttackCards.Controls.Count.ToString());
+                     foreach (Control control in pnlAttackCards.Controls)
+                     {
+                         MessageBox.Show((control as CardPictureBox).PlayingCard.ToString());
+                         phcComputer.AddPlayingCard(control as CardPictureBox);
+                     }
+
+                     pnlAttackCards.Controls.Clear();
+                 }
+             }*/
+
+            if (playerAttacking)
+            {
+                btnFinishTurn.Text = "Next Turn";
+                btnFinishTurn.Click -= btnFinishTurn_Click;
+                btnFinishTurn.Click += NextTurn;
+            }
+        }
+
+
+        /// <summary>
+        /// Handles btnFinishTurn if the player has already played
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void NextTurn(object sender, EventArgs e)
+        {
+
+            // flips the attack boolean
+            playerAttacking = !playerAttacking;
+
+            currentPlayer = 1;
+
+            pnlAttackCards.Controls.Clear();
+            pnlDefendCards.Controls.Clear();
+
+            DisperseCards();
+
+            if (!playerAttacking)
+                AI_Logic();
+
+            btnFinishTurn.Text = "Finish Turn";
+            btnFinishTurn.Click -= NextTurn;
+            btnFinishTurn.Click += btnFinishTurn_Click;
+        }
+
+        private void AI_Logic()
+        {
             int numberOfCards = phcComputer.PlayerInformation.CardsRemaining();
             int startingIndex = 0;
 
-            if (!playerAttacking)
+            if (playerAttacking)
             {
-                // AI Attack Logic Will go here
-                
-            }
-            else
-            {
+                // AI DEFEND LOGIC
                 // stores the list of cards the AI will play
                 List<CardPictureBox> boxes = new List<CardPictureBox>();
 
@@ -338,7 +466,7 @@ namespace Durak
                                 // save the current cardPictureBox
                                 CardPictureBox currentCard = phcComputer.RetrieveCardBox(count);
                                 // if it is better than the current card in the attack panel, play it
-                                if (currentCard.PlayingCard > cpb.PlayingCard)
+                                if (CheckDefendCard(currentCard.PlayingCard))
                                 {
                                     cardPlayed = true;
                                     boxes.Add(currentCard);
@@ -350,13 +478,13 @@ namespace Durak
                             }
                             startingIndex++;
                         }
-                    }    
+                    }
                 }
 
                 // if the same number of cards have been played
                 // display them on the panel and remove them from the computers hand
                 if (boxes.Count == pnlAttackCards.Controls.Count)
-                { 
+                {
                     foreach (CardPictureBox card in boxes)
                     {
                         phcComputer.RemovePlayingCard(card);
@@ -377,33 +505,77 @@ namespace Durak
                     pnlAttackCards.Controls.Clear();
                 }
             }
-
-            btnFinishTurn.Text = "Next Turn";
-            btnFinishTurn.Click -= btnFinishTurn_Click;
-            btnFinishTurn.Click += NextTurn;
-
-            // flips the attack boolean
-            playerAttacking = !playerAttacking;
+            else
+            {
+                // AT ATTACK LOGIC
+                CardPictureBox cpb = phcComputer.RetrieveCardBox(0);
+                if (CheckAttackCard(cpb.PlayingCard))
+                    MovePlayingCard(phcComputer, pnlAttackCards, phcComputer.RetrieveCardBox(0));
+                else
+                {
+                    MessageBox.Show("Computer is finishing the round");
+                    NextTurn(new object(), new EventArgs());
+                }
+            }
         }
 
+        /// <summary>
+        /// Checks the attacking card.
+        /// </summary>
+        /// <param name="card">The card to be checked</param>
+        /// <return>True is the card can be played</return>
+        /// <returns></returns>
+        private bool CheckAttackCard(Card card)
+        {
+            bool returnValue = false;
+            if (pnlAttackCards.Controls.Count > 0)
+            {
+                if (!CheckPanelCards(pnlAttackCards, card))
+                    returnValue = CheckPanelCards(pnlDefendCards, card);
+                else
+                    returnValue = true;
+            }
+            else
+                returnValue = true;
+
+            return returnValue;
+        }
 
         /// <summary>
-        /// Handles btnFinishTurn if the player has already played
+        /// Checks if the defending card can be played
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void NextTurn(object sender, EventArgs e)
+        /// <param name="card"></param>
+        /// <returns></returns>
+        private bool CheckDefendCard(Card card)
         {
-            currentPlayer = 1;
+            bool returnValue = false;
+            int numberOfAttackCards = pnlAttackCards.Controls.Count;
 
-            pnlAttackCards.Controls.Clear();
-            pnlDefendCards.Controls.Clear();
+            if (card > (pnlAttackCards.Controls[numberOfAttackCards - 1] as CardPictureBox).PlayingCard)
+                returnValue = true;
 
-            DisperseCards();
+            if (returnValue && numberOfAttackCards > 1)
+            {
+                if (!CheckPanelCards(pnlAttackCards, card))
+                    returnValue = CheckPanelCards(pnlDefendCards, card);
+                else
+                    returnValue = true;
+            }
 
-            btnFinishTurn.Text = "Finish Turn";
-            btnFinishTurn.Click -= NextTurn;
-            btnFinishTurn.Click += btnFinishTurn_Click;
+            return returnValue;
+        }
+
+        private bool CheckPanelCards(Panel pnl, Card card)
+        {
+            bool returnValue = false;
+            for (int cardCount = 0; cardCount < pnl.Controls.Count && !returnValue; cardCount++)
+            {
+                CardPictureBox currentCard = pnl.Controls[cardCount] as CardPictureBox;
+                if (card.Rank == currentCard.PlayingCard.Rank)
+                    returnValue = true;
+            }
+
+            return returnValue;
         }
     }
 }
