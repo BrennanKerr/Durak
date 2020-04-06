@@ -23,6 +23,7 @@ namespace Durak
         CardDealer dealer;                      // the dealer object that will disperse the cards
         int currentPlayer;                      // the player whos currently up
         bool playerAttacking;                   // states if the player is supposed to be attacking (true) or defendng (false)
+        bool noCardsRemainingNotification;      // states if the user has been notified of no cards remaining
 
         /// <summary>
         /// Loads the main form
@@ -34,6 +35,7 @@ namespace Durak
             lblCardsRemaining.Text = (dealer.NumberOfCards).ToString();
             Card.trumpsExist = true;
             playerAttacking = true;
+            noCardsRemainingNotification = false;
             currentPlayer = 1;
         }
 
@@ -142,9 +144,40 @@ namespace Durak
                     }
                 }
                 // otherwise
+                else if (!noCardsRemainingNotification)
+                {
+                    cpbDeck.Visible = false;
+                    MessageBox.Show("There are no cards remaining", "No Cards");
+                    noCardsRemainingNotification = true;
+                }
                 else
                 {
-                    MessageBox.Show("There are no cards remaining", "No Cards");
+                    string winner = ""; // string used to determine the winner
+
+                    // if the computer won
+                    if (phcComputer.PlayerInformation.CardsRemaining() == 0)
+                        winner = "Computer";
+                    // if the player won
+                    else if (phcPlayer.PlayerInformation.CardsRemaining() == 0)
+                        winner = "You";
+
+                    // if either player won
+                    if (winner != "")
+                    {
+                        // ask if a new game is going to be started
+                            // if so, reset the game
+                        if (MessageBox.Show(winner + " has won the game." + Environment.NewLine + "Do you want to start a nwe game?", "Game Over",
+                            MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        {
+                            ResetLayout();
+                        }
+                        // otherwise, exit
+                        else
+                        {
+                            MessageBox.Show("Thanks for playing!", "Exiting");
+                            this.Close();
+                        }
+                    }
                 }
 
                 // updates the cards remaining label
@@ -277,7 +310,9 @@ namespace Durak
                 pnlAttackCards.Controls.Clear();
                 pnlDefendCards.Controls.Clear();
 
-                btnFinishTurn.Enabled = true;
+                cpbDeck.Visible = true;
+                noCardsRemainingNotification = false;
+                playerAttacking = true;
             }
         }
 
