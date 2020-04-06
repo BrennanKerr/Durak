@@ -407,6 +407,15 @@ namespace Durak
                 btnFinishTurn.Click -= btnFinishTurn_Click;
                 btnFinishTurn.Click += NextTurn;
             }
+            else
+            {
+                if (MessageBox.Show("Do you want to forfeit the Round? Doing so will result in you taking all cards currently in Play", "Forfeit?",
+                    MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    RetrievePlayedCards(phcPlayer);
+                    NextTurn(sender, e);
+                }
+            }
         }
 
 
@@ -496,13 +505,7 @@ namespace Durak
                 else
                 {
                     MessageBox.Show("Unable to Defend. Player wins round!", pnlAttackCards.Controls.Count.ToString());
-                    foreach (Control control in pnlAttackCards.Controls)
-                    {
-                        MessageBox.Show((control as CardPictureBox).PlayingCard.ToString());
-                        phcComputer.AddPlayingCard(control as CardPictureBox);
-                    }
-
-                    pnlAttackCards.Controls.Clear();
+                    RetrievePlayedCards(phcComputer);
                 }
             }
             else
@@ -524,7 +527,7 @@ namespace Durak
         /// </summary>
         /// <param name="card">The card to be checked</param>
         /// <return>True is the card can be played</return>
-        /// <returns></returns>
+        /// <returns>true if the card can be played</returns>
         private bool CheckAttackCard(Card card)
         {
             bool returnValue = false;
@@ -544,8 +547,8 @@ namespace Durak
         /// <summary>
         /// Checks if the defending card can be played
         /// </summary>
-        /// <param name="card"></param>
-        /// <returns></returns>
+        /// <param name="card">the card to be checked</param>
+        /// <returns>true if the card can be played</returns>
         private bool CheckDefendCard(Card card)
         {
             bool returnValue = false;
@@ -565,6 +568,12 @@ namespace Durak
             return returnValue;
         }
 
+        /// <summary>
+        /// Checks if the card's rank matches a previous one played
+        /// </summary>
+        /// <param name="pnl"></param>
+        /// <param name="card"></param>
+        /// <returns></returns>
         private bool CheckPanelCards(Panel pnl, Card card)
         {
             bool returnValue = false;
@@ -576,6 +585,24 @@ namespace Durak
             }
 
             return returnValue;
+        }
+
+        /// <summary>
+        /// Adds the cards currently on the table into the players hand
+        /// </summary>
+        /// <param name="phc">the player's hand that will be getting the cards</param>
+        private void RetrievePlayedCards(PlayerHand phc)
+        {
+            for (int cardCount = 0; cardCount < pnlAttackCards.Controls.Count;)
+            {
+                phc.AddPlayingCard(pnlAttackCards.Controls[cardCount] as CardPictureBox);
+            }
+            for (int cardCount = 0; cardCount < pnlDefendCards.Controls.Count;)
+            {
+                phc.AddPlayingCard(pnlDefendCards.Controls[cardCount] as CardPictureBox);
+            }
+            pnlAttackCards.Controls.Clear();
+            pnlDefendCards.Controls.Clear();
         }
     }
 }
