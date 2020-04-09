@@ -232,7 +232,7 @@ namespace Durak
                             AI_Logic();
                         }
                         else
-                            MessageBox.Show("The card must be higher than the last played card");
+                            MessageBox.Show("The card cannot be played. Must be a higher card in the same suit or be within the trump suit.");
                     }
                 }
             }
@@ -340,6 +340,8 @@ namespace Durak
                     if (MessageBox.Show("Are you sure you don't want to play any more cards?", "End Turn?",
                     MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
+                        // flips the attack boolean
+                        playerAttacking = !playerAttacking;
                         NextTurn(sender, e);
                     }
                 }
@@ -367,10 +369,6 @@ namespace Durak
         /// <param name="e"></param>
         private void NextTurn(object sender, EventArgs e)
         {
-
-            // flips the attack boolean
-            playerAttacking = !playerAttacking;
-
             currentPlayer = 1;
 
             pnlAttackCards.Controls.Clear();
@@ -459,6 +457,7 @@ namespace Durak
                 else
                 {
                     MessageBox.Show("Computer is finishing the round");
+                    playerAttacking = true;
                     NextTurn(new object(), new EventArgs());
                 }
             }
@@ -496,8 +495,13 @@ namespace Durak
             bool returnValue = false;
             int numberOfAttackCards = pnlAttackCards.Controls.Count;
 
-            if (card > (pnlAttackCards.Controls[numberOfAttackCards - 1] as CardPictureBox).PlayingCard)
+            Card attackCard = (pnlAttackCards.Controls[numberOfAttackCards - 1] as CardPictureBox).PlayingCard;
+            if (card > attackCard && card.Suit == attackCard.Suit)
                 returnValue = true;
+            else if (card.Suit == Card.TrumpSuit && attackCard.Suit != Card.TrumpSuit)
+                returnValue = true;
+            /*if (card > (pnlAttackCards.Controls[numberOfAttackCards - 1] as CardPictureBox).PlayingCard)
+                returnValue = true;*/
 
             if (returnValue && numberOfAttackCards > 1)
             {
