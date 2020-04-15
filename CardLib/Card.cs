@@ -132,7 +132,10 @@ namespace CardLib
             {
                 if (left.Suit == trumpSuit)
                 {
-                    returnValue = true;
+                    if (right.Suit != trumpSuit)
+                        returnValue = true;
+                    else
+                        returnValue = (left.Rank > right.Rank);
                 }
                 else if (right.Suit == trumpSuit)
                 {

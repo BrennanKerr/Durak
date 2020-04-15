@@ -32,7 +32,7 @@ namespace CardLib
         public void Remove(Card oldCard)
         {
             if (!List.Contains(oldCard))
-                throw new CardDoesNotExistException(oldCard.ToString() + " does not exist in this players hand", oldCard);
+                throw new CardDoesNotExistException(oldCard.ToString()  + " does not exist in this players hand", oldCard);
             List.Remove(oldCard);
         }
 

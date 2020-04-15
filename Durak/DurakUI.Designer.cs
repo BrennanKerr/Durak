@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            PlayerLib.Player player5 = new PlayerLib.Player();
-            PlayerLib.Player player6 = new PlayerLib.Player();
+            PlayerLib.Player player3 = new PlayerLib.Player();
+            PlayerLib.Player player4 = new PlayerLib.Player();
             this.cpbDeck = new CardBox.CardPictureBox();
             this.pnlAttackCards = new System.Windows.Forms.Panel();
             this.pnlDefendCards = new System.Windows.Forms.Panel();
@@ -98,8 +98,8 @@
             this.phcComputer.FaceUp = false;
             this.phcComputer.Location = new System.Drawing.Point(122, 12);
             this.phcComputer.Name = "phcComputer";
-            player5.Name = null;
-            this.phcComputer.PlayerInformation = player5;
+            player3.Name = null;
+            this.phcComputer.PlayerInformation = player3;
             this.phcComputer.PlayerName = null;
             this.phcComputer.Size = new System.Drawing.Size(1000, 166);
             this.phcComputer.TabIndex = 1;
@@ -110,8 +110,8 @@
             this.phcPlayer.FaceUp = false;
             this.phcPlayer.Location = new System.Drawing.Point(122, 457);
             this.phcPlayer.Name = "phcPlayer";
-            player6.Name = null;
-            this.phcPlayer.PlayerInformation = player6;
+            player4.Name = null;
+            this.phcPlayer.PlayerInformation = player4;
             this.phcPlayer.PlayerName = null;
             this.phcPlayer.Size = new System.Drawing.Size(1000, 166);
             this.phcPlayer.TabIndex = 0;
@@ -173,6 +173,10 @@
             this.Controls.Add(this.pbTrumpCard);
             this.Controls.Add(this.phcComputer);
             this.Controls.Add(this.phcPlayer);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1263, 674);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1263, 674);
             this.Name = "DurakUI";
             this.Text = "Durak";
             this.Load += new System.EventHandler(this.Form1_Load);
