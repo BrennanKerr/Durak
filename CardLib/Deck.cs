@@ -4,6 +4,10 @@
  * 
  * Author:  Group 1
  * Since:   8 March 2020
+ * 
+  * Some content was referenced and implemented from
+ *      Watson, K. et al. (2013). Beginning Visual C# 2022 Programming. 
+ *          Wrox Press.
  */
 
 using System;

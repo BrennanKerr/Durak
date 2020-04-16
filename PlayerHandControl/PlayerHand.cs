@@ -6,6 +6,8 @@
  * Since:   28 March 2020
  * 
  * See: http://acbl.mybigcommerce.com/52-playing-cards/ for card images
+ * Utilizes portions of Thom MacDonalds code fround here
+ *      https://www.youtube.com/playlist?list=PLfNfAX7mRzNqDFJr-9UJZ6praJY10fXvY
  */
 
 
@@ -14,7 +16,6 @@ using System.Windows.Forms;
 using CardBox;
 using PlayerLib;
 using CardLib;
-using System.Collections.Generic;
 
 namespace PlayerHandControl
 {
@@ -271,22 +272,31 @@ namespace PlayerHandControl
             lblNumberOfCards.Text = "0";
         }
 
+        /// <summary>
+        /// Retrieves the control stored at the desired index
+        /// </summary>
+        /// <param name="index">the index of the list to return</param>
+        /// <returns>a CardPictureBox that matches the control at that index</returns>
         public CardPictureBox RetrieveCardBox(int index)
         {
-            CardPictureBox cpb;
+            CardPictureBox cpb; // will store the card picture box
 
+            // if there are controls in the panel
             if (index < pnlHand.Controls.Count)
             {
+                // attempt to convert the control to a CardPictureBox
                 cpb = pnlHand.Controls[index] as CardPictureBox;;
+                // if the conversion was not successful, throw an error
                 if (cpb == null)
                     throw new InvalidCastException("The control at {0} cannot be fully converted to a CardPictureBox", index);
             }
+            // no controls, therefore throw an error
             else
             {
                 throw new IndexOutOfRangeException("There is no Control at the index of " + index);
             }
 
-            return cpb;
+            return cpb; // return the card
         }
     }
 }

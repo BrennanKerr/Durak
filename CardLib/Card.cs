@@ -6,6 +6,11 @@
  * Since:   28 March 2020
  * 
  * See: http://acbl.mybigcommerce.com/52-playing-cards/ for card images
+ * Some content was referenced and implemented from
+ *      Watson, K. et al. (2013). Beginning Visual C# 2022 Programming. 
+ *          Wrox Press.
+ *      Thom Macdonald 
+ *          See: https://www.youtube.com/playlist?list=PLfNfAX7mRzNqDFJr-9UJZ6praJY10fXvY 
  */
 
 using System;

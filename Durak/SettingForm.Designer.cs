@@ -30,9 +30,9 @@
         {
             this.tbPlayerName = new System.Windows.Forms.TextBox();
             this.gbSizes = new System.Windows.Forms.GroupBox();
-            this.rbSize1 = new System.Windows.Forms.RadioButton();
-            this.rbSize2 = new System.Windows.Forms.RadioButton();
             this.rbSize3 = new System.Windows.Forms.RadioButton();
+            this.rbSize2 = new System.Windows.Forms.RadioButton();
+            this.rbSize1 = new System.Windows.Forms.RadioButton();
             this.lblName = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.gbSizes.SuspendLayout();
@@ -44,6 +44,7 @@
             this.tbPlayerName.Name = "tbPlayerName";
             this.tbPlayerName.Size = new System.Drawing.Size(127, 20);
             this.tbPlayerName.TabIndex = 0;
+            this.tbPlayerName.TextChanged += new System.EventHandler(this.tbPlayerName_TextChanged);
             // 
             // gbSizes
             // 
@@ -57,15 +58,15 @@
             this.gbSizes.TabStop = false;
             this.gbSizes.Text = "DeckSizes";
             // 
-            // rbSize1
+            // rbSize3
             // 
-            this.rbSize1.AutoSize = true;
-            this.rbSize1.Location = new System.Drawing.Point(20, 20);
-            this.rbSize1.Name = "rbSize1";
-            this.rbSize1.Size = new System.Drawing.Size(37, 17);
-            this.rbSize1.TabIndex = 0;
-            this.rbSize1.Text = "20";
-            this.rbSize1.UseVisualStyleBackColor = true;
+            this.rbSize3.AutoSize = true;
+            this.rbSize3.Location = new System.Drawing.Point(20, 68);
+            this.rbSize3.Name = "rbSize3";
+            this.rbSize3.Size = new System.Drawing.Size(37, 17);
+            this.rbSize3.TabIndex = 2;
+            this.rbSize3.Text = "52";
+            this.rbSize3.UseVisualStyleBackColor = true;
             // 
             // rbSize2
             // 
@@ -79,15 +80,15 @@
             this.rbSize2.Text = "36";
             this.rbSize2.UseVisualStyleBackColor = true;
             // 
-            // rbSize3
+            // rbSize1
             // 
-            this.rbSize3.AutoSize = true;
-            this.rbSize3.Location = new System.Drawing.Point(20, 68);
-            this.rbSize3.Name = "rbSize3";
-            this.rbSize3.Size = new System.Drawing.Size(37, 17);
-            this.rbSize3.TabIndex = 2;
-            this.rbSize3.Text = "52";
-            this.rbSize3.UseVisualStyleBackColor = true;
+            this.rbSize1.AutoSize = true;
+            this.rbSize1.Location = new System.Drawing.Point(20, 20);
+            this.rbSize1.Name = "rbSize1";
+            this.rbSize1.Size = new System.Drawing.Size(37, 17);
+            this.rbSize1.TabIndex = 0;
+            this.rbSize1.Text = "20";
+            this.rbSize1.UseVisualStyleBackColor = true;
             // 
             // lblName
             // 
