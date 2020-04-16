@@ -57,7 +57,10 @@ namespace PlayerHandControl
         {
             get { return myPlayer.Name; }
             set 
-            { 
+            {
+                if (value != null)
+                    if (value.Contains(":"))
+                        throw new ArgumentException("Cannot use : in your name", "value");
                 myPlayer.Name = value;
                 lblName.Text = myPlayer.Name;
             }

@@ -16,3 +16,4 @@ D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\Durak\obj\Debug\
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\Durak\obj\Debug\Durak.exe
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\Durak\obj\Debug\Durak.pdb
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\Durak\obj\Debug\Durak.DurakUI.resources
+D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\Durak\obj\Debug\Durak.SettingForm.resources

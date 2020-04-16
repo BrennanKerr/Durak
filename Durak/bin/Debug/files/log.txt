@@ -1,0 +1,1226 @@
+
+
+=====================================
+Game Started At: 4/16/2020 4:00:12 PM
+Trump Card: Queen of Clubs
+Player Computer has drawn the card Jack of Clubs from the deck
+Player Computer has drawn the card Seven of Spades from the deck
+Player Computer has drawn the card Nine of Clubs from the deck
+Player Computer has drawn the card Ace of Diamonds from the deck
+Player Computer has drawn the card Ten of Diamonds from the deck
+Player Computer has drawn the card Seven of Diamonds from the deck
+Player Player has drawn the card King of Spades from the deck
+Player Player has drawn the card King of Clubs from the deck
+Player Player has drawn the card King of Hearts from the deck
+Player Player has drawn the card Ten of Spades from the deck
+Player Player has drawn the card King of Diamonds from the deck
+Player Player has drawn the card Queen of Hearts from the deck
+Player attacked with King of Spades
+Computer defended with Jack of Clubs
+Player attacked with King of Clubs
+Player has won the round as the computer was not able to defend
+Computer has taken the card King of Spades from the table
+Computer has taken the card King of Clubs from the table
+Computer has taken the card Jack of Clubs from the table
+Player Player has drawn the card Eight of Diamonds from the deck
+Player Player has drawn the card Nine of Diamonds from the deck
+User Closed the game at: 4/16/2020 4:00:27 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 4:03:22 PM
+Trump Card: Seven of Spades
+Player Computer has drawn the card Seven of Hearts from the deck
+Player Computer has drawn the card Eight of Spades from the deck
+Player Computer has drawn the card Ten of Spades from the deck
+Player Computer has drawn the card Eight of Clubs from the deck
+Player Computer has drawn the card Seven of Clubs from the deck
+Player Computer has drawn the card King of Diamonds from the deck
+Player Player has drawn the card Queen of Hearts from the deck
+Player Player has drawn the card King of Clubs from the deck
+Player Player has drawn the card Nine of Spades from the deck
+Player Player has drawn the card Queen of Spades from the deck
+Player Player has drawn the card Six of Spades from the deck
+Player Player has drawn the card King of Hearts from the deck
+User Closed the game at: 4/16/2020 4:03:31 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 4:03:52 PM
+Trump Card: Seven of Clubs
+Player Computer has drawn the card Six of Hearts from the deck
+Player Computer has drawn the card Eight of Spades from the deck
+Player Computer has drawn the card Queen of Spades from the deck
+Player Computer has drawn the card King of Clubs from the deck
+Player Computer has drawn the card Ace of Clubs from the deck
+Player Computer has drawn the card Ten of Clubs from the deck
+Player Player has drawn the card Six of Diamonds from the deck
+Player Player has drawn the card Jack of Hearts from the deck
+Player Player has drawn the card Nine of Hearts from the deck
+Player Player has drawn the card King of Hearts from the deck
+Player Player has drawn the card King of Diamonds from the deck
+Player Player has drawn the card Jack of Spades from the deck
+Player attacked with Six of Diamonds
+Computer defended with King of Clubs
+Player decided to end the round without doing another attack
+Player Computer has drawn the card Ace of Spades from the deck
+Player Player has drawn the card Ten of Hearts from the deck
+
+	New Round Has Started: Computer is attacking
+Computer attacked with Six of Hearts
+Player defended with Nine of Hearts
+Computer decided to end the round without doing another attack
+Player Computer has drawn the card Seven of Spades from the deck
+Player Player has drawn the card King of Spades from the deck
+
+	New Round Has Started: Player is attacking
+User Closed the game at: 4/16/2020 4:04:20 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 4:04:42 PM
+Trump Card: Nine of Hearts
+Player Computer has drawn the card Jack of Diamonds from the deck
+Player Computer has drawn the card Eight of Hearts from the deck
+Player Computer has drawn the card Ten of Clubs from the deck
+Player Computer has drawn the card Eight of Spades from the deck
+Player Computer has drawn the card Six of Spades from the deck
+Player Computer has drawn the card Six of Clubs from the deck
+Player Player has drawn the card Eight of Diamonds from the deck
+Player Player has drawn the card Six of Hearts from the deck
+Player Player has drawn the card Ace of Diamonds from the deck
+Player Player has drawn the card Six of Diamonds from the deck
+Player Player has drawn the card Seven of Diamonds from the deck
+Player Player has drawn the card Seven of Spades from the deck
+Player attacked with Six of Hearts
+Computer defended with Eight of Hearts
+Player attacked with Six of Diamonds
+Player has won the round as the computer was not able to defend
+Computer has taken the card Six of Hearts from the table
+Computer has taken the card Six of Diamonds from the table
+Computer has taken the card Eight of Hearts from the table
+Player Player has drawn the card Ten of Spades from the deck
+Player Player has drawn the card Eight of Clubs from the deck
+
+	New Round Has Started: Player is attacking
+Player attacked with Eight of Clubs
+Computer defended with Ten of Clubs
+Player attacked with Eight of Diamonds
+Computer defended with Eight of Hearts
+Player attacked with Ten of Spades
+Player has won the round as the computer was not able to defend
+Computer has taken the card Eight of Clubs from the table
+Computer has taken the card Eight of Diamonds from the table
+Computer has taken the card Ten of Spades from the table
+Computer has taken the card Ten of Clubs from the table
+Computer has taken the card Eight of Hearts from the table
+Player Player has drawn the card Jack of Hearts from the deck
+Player Player has drawn the card King of Diamonds from the deck
+Player Player has drawn the card Queen of Diamonds from the deck
+
+	New Round Has Started: Player is attacking
+User Closed the game at: 4/16/2020 4:05:05 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 4:06:22 PM
+Trump Card: Ace of Diamonds
+Player Computer has drawn the card Nine of Hearts from the deck
+Player Computer has drawn the card Ten of Spades from the deck
+Player Computer has drawn the card Six of Hearts from the deck
+Player Computer has drawn the card Jack of Hearts from the deck
+Player Computer has drawn the card Seven of Hearts from the deck
+Player Computer has drawn the card Nine of Spades from the deck
+Player Player has drawn the card Eight of Spades from the deck
+Player Player has drawn the card Eight of Clubs from the deck
+Player Player has drawn the card Ten of Clubs from the deck
+Player Player has drawn the card Jack of Diamonds from the deck
+Player Player has drawn the card Queen of Clubs from the deck
+Player Player has drawn the card Seven of Clubs from the deck
+
+	New Round Has Started: Player is attacking
+Player attacked with Jack of Diamonds
+Player has won the round as the computer was not able to defend
+Computer has taken the card Jack of Diamonds from the table
+Player Player has drawn the card Ace of Clubs from the deck
+
+	New Round Has Started: Player is attacking
+Player attacked with Eight of Spades
+Computer defended with Ten of Spades
+Player attacked with Eight of Clubs
+Player has won the round as the computer was not able to defend
+Computer has taken the card Eight of Spades from the table
+Computer has taken the card Eight of Clubs from the table
+Computer has taken the card Ten of Spades from the table
+Player Player has drawn the card Ace of Hearts from the deck
+Player Player has drawn the card Eight of Hearts from the deck
+
+	New Round Has Started: Player is attacking
+User Closed the game at: 4/16/2020 4:06:41 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 4:11:12 PM
+Trump Card: King of Spades
+	Player Computer has drawn the card Ten of Hearts from the deck
+	Player Computer has drawn the card Eight of Clubs from the deck
+	Player Computer has drawn the card Queen of Hearts from the deck
+	Player Computer has drawn the card Ten of Clubs from the deck
+	Player Computer has drawn the card Ten of Spades from the deck
+	Player Computer has drawn the card Eight of Diamonds from the deck
+	Player Player has drawn the card Ace of Hearts from the deck
+	Player Player has drawn the card Seven of Diamonds from the deck
+	Player Player has drawn the card Eight of Spades from the deck
+	Player Player has drawn the card Ace of Diamonds from the deck
+	Player Player has drawn the card Queen of Spades from the deck
+	Player Player has drawn the card Ace of Clubs from the deck
+
+	New Round Has Started: Player is attacking
+Player attacked with Ace of Hearts
+Computer defended with Ten of Spades
+User Closed the game at: 4/16/2020 4:11:31 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 4:12:22 PM
+Trump Card: Nine of Diamonds
+	Player Computer has drawn the card Nine of Hearts from the deck
+	Player Computer has drawn the card Queen of Hearts from the deck
+	Player Computer has drawn the card Seven of Diamonds from the deck
+	Player Computer has drawn the card Seven of Hearts from the deck
+	Player Computer has drawn the card Six of Clubs from the deck
+	Player Computer has drawn the card Eight of Hearts from the deck
+	Player Player has drawn the card Ace of Spades from the deck
+	Player Player has drawn the card King of Clubs from the deck
+	Player Player has drawn the card Eight of Clubs from the deck
+	Player Player has drawn the card King of Spades from the deck
+	Player Player has drawn the card Ace of Diamonds from the deck
+	Player Player has drawn the card Jack of Spades from the deck
+
+New Round Has Started: Player is attacking
+User Closed the game at: 4/16/2020 4:12:29 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 4:13:05 PM
+Trump Card: Six of Hearts
+
+Players are drawing cards
+	Player Computer has drawn the card Ten of Spades from the deck
+	Player Computer has drawn the card Eight of Spades from the deck
+	Player Computer has drawn the card Jack of Clubs from the deck
+	Player Computer has drawn the card Six of Clubs from the deck
+	Player Computer has drawn the card Nine of Hearts from the deck
+	Player Computer has drawn the card King of Hearts from the deck
+	Player Player has drawn the card Six of Diamonds from the deck
+	Player Player has drawn the card Ten of Hearts from the deck
+	Player Player has drawn the card Six of Spades from the deck
+	Player Player has drawn the card King of Spades from the deck
+	Player Player has drawn the card Ace of Spades from the deck
+	Player Player has drawn the card Queen of Diamonds from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Six of Diamonds
+	Computer defended with Nine of Hearts
+	Player attacked with Six of Spades
+Player has won the round as the computer was not able to defend
+Computer has taken the card Six of Diamonds from the table
+Computer has taken the card Six of Spades from the table
+Computer has taken the card Nine of Hearts from the table
+
+Players are drawing cards
+	Player Player has drawn the card Nine of Clubs from the deck
+	Player Player has drawn the card Seven of Diamonds from the deck
+
+New Round Has Started: Player is attacking
+User Closed the game at: 4/16/2020 4:13:31 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 4:15:12 PM
+Trump Card: Seven of Hearts
+
+Players are drawing cards
+	Player Computer has drawn the card King of Spades from the deck
+	Player Computer has drawn the card King of Diamonds from the deck
+	Player Computer has drawn the card Nine of Clubs from the deck
+	Player Computer has drawn the card Eight of Diamonds from the deck
+	Player Computer has drawn the card Ace of Hearts from the deck
+	Player Computer has drawn the card Seven of Clubs from the deck
+	Player Player has drawn the card Six of Spades from the deck
+	Player Player has drawn the card Jack of Clubs from the deck
+	Player Player has drawn the card Queen of Spades from the deck
+	Player Player has drawn the card Six of Hearts from the deck
+	Player Player has drawn the card Eight of Clubs from the deck
+	Player Player has drawn the card Nine of Diamonds from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Six of Spades
+	Computer defended with King of Spades
+	Player attacked with Six of Hearts
+
+Player has won the round as the computer was not able to defend
+Computer has taken the card Six of Spades from the table
+Computer has taken the card Six of Hearts from the table
+Computer has taken the card King of Spades from the table
+
+Players are drawing cards
+	Player Player has drawn the card Ace of Diamonds from the deck
+	Player Player has drawn the card Eight of Spades from the deck
+
+New Round Has Started: Player is attacking
+User Closed the game at: 4/16/2020 4:15:45 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 4:16:04 PM
+Trump Card: Seven of Diamonds
+
+Players are drawing cards
+	Player Computer has drawn the card Jack of Hearts from the deck
+	Player Computer has drawn the card Seven of Spades from the deck
+	Player Computer has drawn the card Six of Diamonds from the deck
+	Player Computer has drawn the card King of Spades from the deck
+	Player Computer has drawn the card Nine of Spades from the deck
+	Player Computer has drawn the card Ten of Spades from the deck
+	Player Player has drawn the card Ten of Diamonds from the deck
+	Player Player has drawn the card Nine of Hearts from the deck
+	Player Player has drawn the card Eight of Clubs from the deck
+	Player Player has drawn the card Six of Hearts from the deck
+	Player Player has drawn the card Ace of Spades from the deck
+	Player Player has drawn the card Eight of Diamonds from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Eight of Clubs
+	Computer defended with Six of Diamonds
+	Player attacked with Eight of Diamonds
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Eight of Clubs from the table
+	Computer has taken the card Eight of Diamonds from the table
+	Computer has taken the card Six of Diamonds from the table
+
+Players are drawing cards
+	Player Player has drawn the card Seven of Hearts from the deck
+	Player Player has drawn the card Eight of Hearts from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Ace of Spades
+	Computer defended with Eight of Diamonds
+	Player attacked with Eight of Hearts
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Ace of Spades from the table
+	Computer has taken the card Eight of Hearts from the table
+	Computer has taken the card Eight of Diamonds from the table
+
+Players are drawing cards
+	Player Player has drawn the card Ace of Clubs from the deck
+	Player Player has drawn the card Queen of Diamonds from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Ace of Clubs
+	Computer defended with Six of Diamonds
+	Player attacked with Six of Hearts
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Ace of Clubs from the table
+	Computer has taken the card Six of Hearts from the table
+	Computer has taken the card Six of Diamonds from the table
+
+Players are drawing cards
+	Player Player has drawn the card Nine of Diamonds from the deck
+	Player Player has drawn the card King of Diamonds from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Nine of Diamonds
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Nine of Diamonds from the table
+
+Players are drawing cards
+	Player Player has drawn the card Six of Clubs from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Six of Clubs
+	Computer defended with Eight of Clubs
+
+Player decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Player has drawn the card King of Clubs from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Jack of Hearts
+	Player defended with King of Diamonds
+
+Computer decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Player has drawn the card Six of Spades from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Seven of Hearts
+	Computer defended with Eight of Hearts
+
+Player decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Player has drawn the card Queen of Clubs from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Seven of Spades
+	Player defended with Ten of Diamonds
+
+Computer decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Player has drawn the card Eight of Spades from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Queen of Clubs
+	Computer defended with Eight of Diamonds
+	Player attacked with Queen of Diamonds
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Queen of Clubs from the table
+	Computer has taken the card Queen of Diamonds from the table
+	Computer has taken the card Eight of Diamonds from the table
+
+Players are drawing cards
+	Player Player has drawn the card Queen of Hearts from the deck
+	Player Player has drawn the card Ace of Hearts from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Six of Spades
+	Computer defended with King of Spades
+	Player attacked with King of Clubs
+	Computer defended with Six of Diamonds
+
+Player decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Player has drawn the card Ten of Clubs from the deck
+	Player Player has drawn the card Jack of Spades from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Nine of Spades
+
+Computer has won the round as Player did not defend
+	Player has taken the card Nine of Spades from the table
+
+Players are drawing cards
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Ten of Spades
+	Player defended with Jack of Spades
+
+Computer decided to end the round without doing another attack
+
+Players are drawing cards
+
+New Round Has Started: Player is attacking
+	Player attacked with Nine of Spades
+	Computer defended with Ace of Spades
+	Player attacked with Nine of Hearts
+	Computer defended with Nine of Diamonds
+	Player attacked with Ace of Hearts
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Nine of Spades from the table
+	Computer has taken the card Nine of Hearts from the table
+	Computer has taken the card Ace of Hearts from the table
+	Computer has taken the card Ace of Spades from the table
+	Computer has taken the card Nine of Diamonds from the table
+
+Players are drawing cards
+	Player Player has drawn the card Jack of Clubs from the deck
+	Player Player has drawn the card Nine of Clubs from the deck
+	Player Player has drawn the card Seven of Clubs from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Nine of Clubs
+	Computer defended with Ace of Clubs
+
+Player decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Player has drawn the card Queen of Spades from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Six of Hearts
+	Player defended with Queen of Hearts
+	Computer attacked with Queen of Clubs
+
+Computer has won the round as Player did not defend
+	Player has taken the card Six of Hearts from the table
+	Player has taken the card Queen of Clubs from the table
+	Player has taken the card Queen of Hearts from the table
+
+Players are drawing cards
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Queen of Diamonds
+
+Computer has won the round as Player did not defend
+	Player has taken the card Queen of Diamonds from the table
+
+Players are drawing cards
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Eight of Diamonds
+	Player defended with Queen of Diamonds
+
+Computer decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Computer has drawn the card Ten of Hearts from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Queen of Hearts
+	Computer defended with Ace of Hearts
+	Player attacked with Queen of Clubs
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Queen of Hearts from the table
+	Computer has taken the card Queen of Clubs from the table
+	Computer has taken the card Ace of Hearts from the table
+
+Players are drawing cards
+
+New Round Has Started: Player is attacking
+	Player attacked with Eight of Spades
+	Computer defended with Nine of Spades
+
+Player decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Player has drawn the card Ace of Diamonds from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Nine of Hearts
+	Player defended with Ace of Diamonds
+	Computer attacked with Ace of Spades
+
+Computer has won the round as Player did not defend
+	Player has taken the card Nine of Hearts from the table
+	Player has taken the card Ace of Spades from the table
+	Player has taken the card Ace of Diamonds from the table
+
+Players are drawing cards
+	Player Computer has drawn the card King of Hearts from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Nine of Diamonds
+	Player defended with Ace of Diamonds
+
+Computer decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Computer has drawn the card Jack of Diamonds from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Ace of Spades
+	Computer defended with Jack of Diamonds
+	Player attacked with Jack of Clubs
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Ace of Spades from the table
+	Computer has taken the card Jack of Clubs from the table
+	Computer has taken the card Jack of Diamonds from the table
+
+New Round Has Started: Player is attacking
+	Player attacked with Six of Hearts
+	Computer defended with Ten of Hearts
+	Player attacked with Ten of Clubs
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Six of Hearts from the table
+	Computer has taken the card Ten of Clubs from the table
+	Computer has taken the card Ten of Hearts from the table
+
+New Round Has Started: Player is attacking
+	Player attacked with Nine of Hearts
+	Computer defended with Queen of Hearts
+	Player attacked with Queen of Spades
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Nine of Hearts from the table
+	Computer has taken the card Queen of Spades from the table
+	Computer has taken the card Queen of Hearts from the table
+
+New Round Has Started: Player is attacking
+	Player attacked with Seven of Clubs
+	Computer defended with Queen of Clubs
+
+Player decided to end the round without doing another attack
+You won the game
+
+
+=====================================
+Game Started At: 4/16/2020 4:20:11 PM
+Trump Card: Eight of Clubs
+
+Players are drawing cards
+	Player Computer has drawn the card Queen of Hearts from the deck
+	Player Computer has drawn the card Six of Diamonds from the deck
+	Player Computer has drawn the card Ten of Clubs from the deck
+	Player Computer has drawn the card Ten of Spades from the deck
+	Player Computer has drawn the card Queen of Spades from the deck
+	Player Computer has drawn the card Queen of Diamonds from the deck
+	Player Player has drawn the card Six of Hearts from the deck
+	Player Player has drawn the card Eight of Spades from the deck
+	Player Player has drawn the card Queen of Clubs from the deck
+	Player Player has drawn the card Nine of Clubs from the deck
+	Player Player has drawn the card Eight of Diamonds from the deck
+	Player Player has drawn the card Nine of Spades from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Six of Hearts
+	Computer defended with Queen of Hearts
+	Player attacked with Queen of Clubs
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Six of Hearts from the table
+	Computer has taken the card Queen of Clubs from the table
+	Computer has taken the card Queen of Hearts from the table
+
+Players are drawing cards
+	Player Player has drawn the card Seven of Diamonds from the deck
+	Player Player has drawn the card Jack of Spades from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Nine of Clubs
+	Computer defended with Ten of Clubs
+	Player attacked with Nine of Spades
+	Computer defended with Ten of Spades
+
+Player decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Player has drawn the card King of Diamonds from the deck
+	Player Player has drawn the card Jack of Hearts from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Six of Diamonds
+	Player defended with Eight of Diamonds
+
+Computer decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Computer has drawn the card Six of Clubs from the deck
+	Player Player has drawn the card Nine of Diamonds from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Jack of Spades
+	Computer defended with Queen of Spades
+	Player attacked with Jack of Hearts
+	Computer defended with Queen of Clubs
+
+Player decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Computer has drawn the card Nine of Hearts from the deck
+	Player Computer has drawn the card Seven of Clubs from the deck
+	Player Player has drawn the card Ace of Diamonds from the deck
+	Player Player has drawn the card Jack of Diamonds from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Queen of Diamonds
+	Player defended with Ace of Diamonds
+
+Computer decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Computer has drawn the card Ten of Hearts from the deck
+	Player Player has drawn the card Ace of Clubs from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Ace of Clubs
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Ace of Clubs from the table
+
+Players are drawing cards
+	Player Player has drawn the card Eight of Hearts from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Eight of Hearts
+	Computer defended with Queen of Hearts
+	Player attacked with Eight of Spades
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Eight of Hearts from the table
+	Computer has taken the card Eight of Spades from the table
+	Computer has taken the card Queen of Hearts from the table
+
+Players are drawing cards
+	Player Player has drawn the card Jack of Clubs from the deck
+	Player Player has drawn the card Ten of Diamonds from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Jack of Diamonds
+	Computer defended with Six of Clubs
+	Player attacked with Jack of Clubs
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Jack of Diamonds from the table
+	Computer has taken the card Jack of Clubs from the table
+	Computer has taken the card Six of Clubs from the table
+
+Players are drawing cards
+	Player Player has drawn the card Ace of Spades from the deck
+	Player Player has drawn the card King of Clubs from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Ace of Spades
+	Computer defended with Seven of Clubs
+
+Player decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Player has drawn the card Ace of Hearts from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Six of Hearts
+	Player defended with Ace of Hearts
+
+Computer decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Player has drawn the card Seven of Spades from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with King of Diamonds
+	Computer defended with Ace of Clubs
+	Player attacked with King of Clubs
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card King of Diamonds from the table
+	Computer has taken the card King of Clubs from the table
+	Computer has taken the card Ace of Clubs from the table
+
+Players are drawing cards
+	Player Player has drawn the card Six of Spades from the deck
+	Player Player has drawn the card King of Spades from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Seven of Diamonds
+	Computer defended with Jack of Diamonds
+	Player attacked with Seven of Spades
+	Computer defended with Jack of Clubs
+
+Player decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Player has drawn the card Seven of Hearts from the deck
+	Player Player has drawn the card King of Hearts from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Nine of Hearts
+	Player defended with King of Hearts
+
+Computer decided to end the round without doing another attack
+
+New Round Has Started: Player is attacking
+	Player attacked with Seven of Hearts
+	Computer defended with Ten of Hearts
+	Player attacked with Ten of Diamonds
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Seven of Hearts from the table
+	Computer has taken the card Ten of Diamonds from the table
+	Computer has taken the card Ten of Hearts from the table
+
+New Round Has Started: Player is attacking
+	Player attacked with Nine of Diamonds
+	Computer defended with Six of Clubs
+	Player attacked with Six of Spades
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Nine of Diamonds from the table
+	Computer has taken the card Six of Spades from the table
+	Computer has taken the card Six of Clubs from the table
+
+New Round Has Started: Player is attacking
+	Player attacked with King of Spades
+	Computer defended with King of Clubs
+
+Player decided to end the round without doing another attack
+You won the game
+
+Game closed at: 4/16/2020 4:21:30 PM
+=====================================
+
+
+=====================================
+Game Started At: 4/16/2020 4:21:34 PM
+Trump Card: Queen of Diamonds
+
+Players are drawing cards
+	Player Computer has drawn the card Seven of Clubs from the deck
+	Player Computer has drawn the card Seven of Diamonds from the deck
+	Player Computer has drawn the card King of Spades from the deck
+	Player Computer has drawn the card Eight of Clubs from the deck
+	Player Computer has drawn the card King of Clubs from the deck
+	Player Computer has drawn the card Jack of Hearts from the deck
+	Player Player has drawn the card Ace of Spades from the deck
+	Player Player has drawn the card Ten of Spades from the deck
+	Player Player has drawn the card King of Diamonds from the deck
+	Player Player has drawn the card Ace of Hearts from the deck
+	Player Player has drawn the card Nine of Spades from the deck
+	Player Player has drawn the card Queen of Spades from the deck
+
+New Round Has Started: Player is attacking
+Trump Card: Queen of Hearts
+User Closed the game at: 4/16/2020 4:21:47 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 4:23:35 PM
+
+Player has decided that their best choice is to reset the game, if that is their best intentions, we cant stop them
+
+
+=====================================
+Game Started At: 4/16/2020 4:23:38 PM
+Trump Card: Six of Clubs
+
+Players are drawing cards
+	Player Computer has drawn the card Six of Hearts from the deck
+	Player Computer has drawn the card Jack of Hearts from the deck
+	Player Computer has drawn the card Eight of Hearts from the deck
+	Player Computer has drawn the card King of Diamonds from the deck
+	Player Computer has drawn the card Seven of Spades from the deck
+	Player Computer has drawn the card Queen of Hearts from the deck
+	Player Player has drawn the card King of Hearts from the deck
+	Player Player has drawn the card Nine of Diamonds from the deck
+	Player Player has drawn the card Queen of Clubs from the deck
+	Player Player has drawn the card Six of Diamonds from the deck
+	Player Player has drawn the card Queen of Diamonds from the deck
+	Player Player has drawn the card Jack of Clubs from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Queen of Clubs
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Queen of Clubs from the table
+
+Players are drawing cards
+	Player Player has drawn the card Ace of Hearts from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Ace of Hearts
+	Computer defended with Queen of Clubs
+	Player attacked with Queen of Diamonds
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Ace of Hearts from the table
+	Computer has taken the card Queen of Diamonds from the table
+	Computer has taken the card Queen of Clubs from the table
+
+Players are drawing cards
+	Player Player has drawn the card Nine of Hearts from the deck
+	Player Player has drawn the card Ace of Diamonds from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Nine of Hearts
+	Computer defended with Jack of Hearts
+	Player attacked with Nine of Diamonds
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Nine of Hearts from the table
+	Computer has taken the card Nine of Diamonds from the table
+	Computer has taken the card Jack of Hearts from the table
+
+Players are drawing cards
+	Player Player has drawn the card Ten of Diamonds from the deck
+	Player Player has drawn the card Nine of Spades from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Nine of Spades
+	Computer defended with Queen of Clubs
+
+Player decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Player has drawn the card Ten of Clubs from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Six of Hearts
+	Player defended with King of Hearts
+
+Computer decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Player has drawn the card Jack of Diamonds from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Jack of Diamonds
+	Computer defended with King of Diamonds
+
+Player decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Player has drawn the card Eight of Clubs from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Eight of Hearts
+	Player defended with Eight of Clubs
+
+Computer decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Player has drawn the card Seven of Clubs from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Ace of Diamonds
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Ace of Diamonds from the table
+
+Players are drawing cards
+	Player Player has drawn the card Seven of Diamonds from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Ten of Diamonds
+	Computer defended with Queen of Diamonds
+
+Player decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Player has drawn the card Nine of Clubs from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Seven of Spades
+	Player defended with Seven of Clubs
+
+Computer decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Player has drawn the card Six of Spades from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Six of Spades
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Six of Spades from the table
+
+Players are drawing cards
+	Player Player has drawn the card Seven of Hearts from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Six of Diamonds
+	Computer defended with Nine of Diamonds
+
+Player decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Player has drawn the card Eight of Diamonds from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Queen of Hearts
+	Player defended with Nine of Clubs
+
+Computer decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Computer has drawn the card King of Spades from the deck
+	Player Player has drawn the card Ten of Hearts from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Seven of Diamonds
+	Computer defended with Ace of Diamonds
+	Player attacked with Seven of Hearts
+	Computer defended with Ace of Hearts
+
+Player decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Computer has drawn the card Ten of Spades from the deck
+	Player Computer has drawn the card Eight of Spades from the deck
+	Player Player has drawn the card Ace of Spades from the deck
+	Player Player has drawn the card Ace of Clubs from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Nine of Hearts
+	Player defended with Ten of Hearts
+
+Computer decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Computer has drawn the card King of Clubs from the deck
+	Player Player has drawn the card Jack of Spades from the deck
+
+New Round Has Started: Player is attacking
+	Player attacked with Ace of Spades
+	Computer defended with King of Clubs
+
+Player decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Computer has drawn the card Queen of Spades from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Jack of Hearts
+	Player defended with Ten of Clubs
+
+Computer decided to end the round without doing another attack
+
+New Round Has Started: Player is attacking
+	Player attacked with Jack of Spades
+	Computer defended with King of Spades
+	Player attacked with Jack of Clubs
+
+Player has won the round as the computer was not able to defend
+	Computer has taken the card Jack of Spades from the table
+	Computer has taken the card Jack of Clubs from the table
+	Computer has taken the card King of Spades from the table
+
+New Round Has Started: Player is attacking
+	Player attacked with Eight of Diamonds
+	Computer defended with Jack of Clubs
+
+Player decided to end the round without doing another attack
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Six of Spades
+	Player defended with Ace of Clubs
+
+Computer decided to end the round without doing another attack
+You won the game
+
+
+=====================================
+Game Started At: 4/16/2020 4:25:58 PM
+
+New Round Has Started: Player is attacking
+User Closed the game at: 4/16/2020 4:26:06 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 4:51:09 PM
+
+
+=====================================
+Game Started At: 4/16/2020 4:51:28 PM
+User Closed the game at: 4/16/2020 4:51:31 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 4:51:42 PM
+Trump Card: Four of Spades
+
+Players are drawing cards
+	Player Computer has drawn the card Nine of Spades from the deck
+	Player Computer has drawn the card Eight of Diamonds from the deck
+	Player Computer has drawn the card Four of Clubs from the deck
+	Player Computer has drawn the card Four of Diamonds from the deck
+	Player Computer has drawn the card Nine of Hearts from the deck
+	Player Computer has drawn the card Ten of Diamonds from the deck
+
+
+=====================================
+Game Started At: 4/16/2020 4:52:47 PM
+Trump Card: Three of Diamonds
+
+Players are drawing cards
+	Player Computer has drawn the card King of Spades from the deck
+	Player Computer has drawn the card Four of Hearts from the deck
+	Player Computer has drawn the card Deuce of Hearts from the deck
+	Player Computer has drawn the card Queen of Spades from the deck
+	Player Computer has drawn the card Five of Clubs from the deck
+	Player Computer has drawn the card King of Diamonds from the deck
+
+
+=====================================
+Game Started At: 4/16/2020 4:53:26 PM
+Trump Card: Deuce of Clubs
+
+Players are drawing cards
+	Player Computer has drawn the card Five of Hearts from the deck
+	Player Computer has drawn the card Five of Spades from the deck
+	Player Computer has drawn the card Nine of Diamonds from the deck
+	Player Computer has drawn the card Nine of Hearts from the deck
+	Player Computer has drawn the card Seven of Hearts from the deck
+	Player Computer has drawn the card Deuce of Spades from the deck
+	Player Player has drawn the card Ten of Spades from the deck
+	Player Player has drawn the card Ten of Hearts from the deck
+	Player Player has drawn the card King of Diamonds from the deck
+	Player Player has drawn the card Three of Hearts from the deck
+	Player Player has drawn the card Six of Hearts from the deck
+	Player Player has drawn the card Four of Diamonds from the deck
+
+New Round Has Started: Player is attacking
+User Closed the game at: 4/16/2020 4:53:29 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 4:54:17 PM
+Trump Card: Four of Spades
+
+Players are drawing cards
+	Player Computer has drawn the card Six of Clubs from the deck
+	Player Computer has drawn the card Queen of Diamonds from the deck
+	Player Computer has drawn the card Six of Spades from the deck
+	Player Computer has drawn the card Five of Clubs from the deck
+	Player Computer has drawn the card Five of Hearts from the deck
+	Player Computer has drawn the card Three of Hearts from the deck
+	Player Player has drawn the card Four of Clubs from the deck
+	Player Player has drawn the card Queen of Hearts from the deck
+	Player Player has drawn the card Queen of Spades from the deck
+	Player Player has drawn the card Eight of Hearts from the deck
+	Player Player has drawn the card Three of Spades from the deck
+	Player Player has drawn the card Ten of Spades from the deck
+
+New Round Has Started: Player is attacking
+User Closed the game at: 4/16/2020 4:54:27 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 4:56:32 PM
+Trump Card: Ten of Hearts
+
+Players are drawing cards
+	Player Computer has drawn the card Three of Clubs from the deck
+	Player Computer has drawn the card Six of Clubs from the deck
+	Player Computer has drawn the card Seven of Diamonds from the deck
+	Player Computer has drawn the card Five of Clubs from the deck
+	Player Computer has drawn the card Ten of Diamonds from the deck
+	Player Computer has drawn the card King of Spades from the deck
+	Player Player has drawn the card Eight of Hearts from the deck
+	Player Player has drawn the card Ace of Spades from the deck
+	Player Player has drawn the card Deuce of Diamonds from the deck
+	Player Player has drawn the card Eight of Spades from the deck
+	Player Player has drawn the card Deuce of Hearts from the deck
+	Player Player has drawn the card Seven of Spades from the deck
+
+New Round Has Started: Player is attacking
+User Closed the game at: 4/16/2020 4:56:36 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 4:57:22 PM
+User Closed the game at: 4/16/2020 4:57:37 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 4:58:20 PM
+
+
+=====================================
+Game Started At: 4/16/2020 4:58:42 PM
+User Closed the game at: 4/16/2020 4:58:44 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 5:01:55 PM
+User Closed the game at: 4/16/2020 5:01:57 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 5:02:04 PM
+Trump Card: Ace of Hearts
+
+Players are drawing cards
+	Player Computer has drawn the card Ten of Diamonds from the deck
+	Player Computer has drawn the card Queen of Diamonds from the deck
+	Player Computer has drawn the card Jack of Spades from the deck
+	Player Computer has drawn the card Queen of Hearts from the deck
+	Player Computer has drawn the card Ace of Spades from the deck
+	Player Computer has drawn the card Jack of Hearts from the deck
+	Player test has drawn the card King of Spades from the deck
+	Player test has drawn the card Ten of Spades from the deck
+	Player test has drawn the card Ten of Hearts from the deck
+	Player test has drawn the card Jack of Diamonds from the deck
+	Player test has drawn the card Ace of Diamonds from the deck
+	Player test has drawn the card King of Diamonds from the deck
+
+New Round Has Started: test is attacking
+User Closed the game at: 4/16/2020 5:02:15 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 5:09:05 PM
+User Closed the game at: 4/16/2020 5:09:07 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 5:10:57 PM
+User Closed the game at: 4/16/2020 5:11:00 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 5:11:25 PM
+Trump Card: Nine of Spades
+
+Players are drawing cards
+	Player Computer has drawn the card King of Diamonds from the deck
+	Player Computer has drawn the card Six of Hearts from the deck
+	Player Computer has drawn the card Ace of Clubs from the deck
+	Player Computer has drawn the card Ten of Diamonds from the deck
+	Player Computer has drawn the card Ace of Spades from the deck
+	Player Computer has drawn the card Seven of Spades from the deck
+	Player Brennan has drawn the card Queen of Hearts from the deck
+	Player Brennan has drawn the card Queen of Spades from the deck
+	Player Brennan has drawn the card Jack of Diamonds from the deck
+	Player Brennan has drawn the card Nine of Diamonds from the deck
+	Player Brennan has drawn the card Eight of Diamonds from the deck
+	Player Brennan has drawn the card Eight of Hearts from the deck
+
+New Round Has Started: Brennan is attacking
+	Brennan attacked with Queen of Hearts
+	Computer defended with Ace of Spades
+	Brennan attacked with Queen of Spades
+
+Brennan has won the round as the computer was not able to defend
+	Computer has taken the card Queen of Hearts from the table
+	Computer has taken the card Queen of Spades from the table
+	Computer has taken the card Ace of Spades from the table
+
+Players are drawing cards
+	Player Brennan has drawn the card Nine of Clubs from the deck
+	Player Brennan has drawn the card Six of Diamonds from the deck
+
+New Round Has Started: Brennan is attacking
+User Closed the game at: 4/16/2020 5:11:50 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 5:13:03 PM
+User Closed the game at: 4/16/2020 5:13:05 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 5:16:22 PM
+User Closed the game at: 4/16/2020 5:16:25 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 5:16:34 PM
+User Closed the game at: 4/16/2020 5:16:37 PM
+	Hopefully the Computer wasn't beating them too badly

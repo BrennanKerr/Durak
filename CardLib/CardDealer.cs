@@ -41,13 +41,11 @@ namespace CardLib
         /// <param name="cardCount">the number of cards the game is going to use</param>
         /// <throws>ArgumentOutOfRangeException if the number of cards is not 52, 36, or 20</throws>
         public CardDealer(int cardCount = 52)
-        {            
-            // sets the number of cards
-            NumberOfCards = cardCount;
+        {
             // initalies the card list
             dealerCards = new CardList();
-            // stores the cards
-            ObtainCards();
+            // sets the number of cards
+            NumberOfCards = cardCount;
         }
 
         /// <summary>
@@ -142,6 +140,7 @@ namespace CardLib
                 else  // otherwise set it
                 {
                     numberOfCards = value;
+                    ObtainCards();  // obtains the cards
                 }
             }
         }

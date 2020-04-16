@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            PlayerLib.Player player3 = new PlayerLib.Player();
-            PlayerLib.Player player4 = new PlayerLib.Player();
+            PlayerLib.Player player1 = new PlayerLib.Player();
+            PlayerLib.Player player2 = new PlayerLib.Player();
             this.cpbDeck = new CardBox.CardPictureBox();
             this.pnlAttackCards = new System.Windows.Forms.Panel();
             this.pnlDefendCards = new System.Windows.Forms.Panel();
@@ -98,8 +98,8 @@
             this.phcComputer.FaceUp = false;
             this.phcComputer.Location = new System.Drawing.Point(122, 12);
             this.phcComputer.Name = "phcComputer";
-            player3.Name = null;
-            this.phcComputer.PlayerInformation = player3;
+            player1.Name = null;
+            this.phcComputer.PlayerInformation = player1;
             this.phcComputer.PlayerName = null;
             this.phcComputer.Size = new System.Drawing.Size(1000, 166);
             this.phcComputer.TabIndex = 1;
@@ -110,8 +110,8 @@
             this.phcPlayer.FaceUp = false;
             this.phcPlayer.Location = new System.Drawing.Point(122, 457);
             this.phcPlayer.Name = "phcPlayer";
-            player4.Name = null;
-            this.phcPlayer.PlayerInformation = player4;
+            player2.Name = null;
+            this.phcPlayer.PlayerInformation = player2;
             this.phcPlayer.PlayerName = null;
             this.phcPlayer.Size = new System.Drawing.Size(1000, 166);
             this.phcPlayer.TabIndex = 0;
@@ -178,7 +178,9 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1263, 674);
             this.Name = "DurakUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Durak";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DurakUI_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbTrumpCard)).EndInit();
             this.ResumeLayout(false);

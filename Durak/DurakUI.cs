@@ -13,14 +13,20 @@ using System.Windows.Forms;
 using CardLib;
 using CardBox;
 using PlayerHandControl;
+using System.IO;
 using System.Collections.Generic;
 
 namespace Durak
 {
     public partial class DurakUI : Form
     {
-        static readonly string[] WINNER_OPTIONS = { "Comptuer", "You" };    // declares the winner options
+        static string[] playerNames = { "Comptuer", "Player" };    // declares the winner options
+        static int numberOfCards;
         const int MINIMUM_NUMBER_OF_CARDS = 6;  // the minimum number of cards in a players hand at the end of each round
+        const string log_file_path = "/files/log.txt";
+        const string stats_file_path = "/fies/stats.txt"; 
+        const string START_GAME_STRING = "\n\n=====================================\nGame Started At: ";
+        StreamWriter writer;
 
         CardDealer dealer;                      // the dealer object that will disperse the cards
         int currentPlayer;                      // the player whos currently up
@@ -34,13 +40,18 @@ namespace Durak
         {
             InitializeComponent();
 
-            dealer = new CardDealer(36);                                // set the number of cards for the dealer
+            SettingForm settings = new SettingForm();
+            settings.ShowDialog();
+
+            dealer = new CardDealer(numberOfCards);  // set the number of cards for the dealer
             lblCardsRemaining.Text = (dealer.NumberOfCards).ToString(); // set the label test to the number of cards
 
             Card.trumpsExist = true;                // sets trump to true
             playerAttacking = true;                 // sets the player to attacking
             noCardsRemainingNotification = false;   // sets the no cards notication to false
             currentPlayer = 1;                      // sets the first player as playing
+
+            WriteToFile(log_file_path, START_GAME_STRING + DateTime.Now.ToString());
         }
 
         /// <summary>
@@ -62,7 +73,7 @@ namespace Durak
         /// <param name="e"></param>
         private void phcPlayer_Load(object sender, EventArgs e)
         {
-            phcPlayer.PlayerName = "Player";
+            phcPlayer.PlayerName = playerNames[1];
             phcPlayer.FaceUp = true;
         }
 
@@ -85,6 +96,8 @@ namespace Durak
                 Card firstCard = dealer.GetNextCard();
                 firstCard.IsFaceUp = true;
 
+                WriteToFile(log_file_path, "Trump Card: " + firstCard.ToString());
+
                 // make the card's suit the trump
                 Card.TrumpSuit = firstCard.Suit;
                 // saves and rotates the image
@@ -92,14 +105,15 @@ namespace Durak
                 pbTrumpCard.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
 
                 // resizes the picture box
-                pbTrumpCard.Size = new Size(CardBox.CardPictureBox.cardSize.Height, CardBox.CardPictureBox.cardSize.Width);
+                pbTrumpCard.Size = new Size(CardPictureBox.cardSize.Height, CardPictureBox.cardSize.Width);
                 // updates the label
                 lblCardsRemaining.Text = (dealer.NumberOfCards - 1).ToString();
             }
             else
             {
-                // dispenses the cards into each players hand
-                DisperseCards();
+                NextTurn();
+                /*// dispenses the cards into each players hand
+                DisperseCards();*/
             }
         }
 
@@ -119,6 +133,7 @@ namespace Durak
                 // if cards are able to be used
                 if (dealer.CurrentCardIndex < dealer.NumberOfCards)
                 {
+                    WriteToFile(log_file_path, "\nPlayers are drawing cards");
                     bool cardsLeft = true;  // determines if the player still has cards left in their hand
 
                     // counts how many PlayerHandControls there are
@@ -151,6 +166,8 @@ namespace Durak
                             // if there are no cards left, set the bool to false
                             if (dealer.CurrentCardIndex >= dealer.NumberOfCards)
                                 cardsLeft = false;
+
+                            WriteToFile(log_file_path, "\tPlayer " + currentPHC.PlayerName.ToString() + " has drawn the card " + cardBox.PlayingCard.ToString() + " from the deck");
                         }
                     }
 
@@ -174,10 +191,10 @@ namespace Durak
                 {
                     // if the computer won
                     if (phcComputer.PlayerInformation.CardsRemaining() == 0)
-                        GameOver(WINNER_OPTIONS[0]);
+                        GameOver(playerNames[0]);
                     // if the player won
                     else if (phcPlayer.PlayerInformation.CardsRemaining() == 0)
-                        GameOver(WINNER_OPTIONS[1]);
+                        GameOver(playerNames[1]);
                 }
 
             }
@@ -245,7 +262,7 @@ namespace Durak
                     {
                         // if there are no cards left to play
                         if (phcPlayer.PlayerInformation.CardsRemaining() == 0 && dealer.CurrentCardIndex < dealer.NumberOfCards)
-                            GameOver(WINNER_OPTIONS[1]);
+                            GameOver(playerNames[1]);
                         // otherwise, let the ai play
                         else
                             AI_Logic();
@@ -273,6 +290,8 @@ namespace Durak
                 phc.RemovePlayingCard(cpb);
                 pnl.Controls.Add(cpb);
                 SetLocation(pnl);
+
+                WriteToFile(log_file_path, "\t" + phc.PlayerName + (pnl == pnlAttackCards ? " attacked " : " defended " ) + "with " + cpb.PlayingCard.ToString());
             }
             // if the card does not exist
             catch (CardDoesNotExistException ex)
@@ -307,6 +326,8 @@ namespace Durak
         /// </summary>
         private void ResetLayout()
         {
+            WriteToFile(log_file_path, START_GAME_STRING + DateTime.Now.ToString());
+
             // reset the dealer
             dealer.ObtainCards();
             // clear the trump card image
@@ -337,7 +358,10 @@ namespace Durak
             // message box appears prompting for the player to make a decision
             // if they press okay, board reset
             if (MessageBox.Show("Are you sure you want to reset the game?", "Reset Game", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                WriteToFile(log_file_path, "\nPlayer has decided that their best choice is to reset the game, if that is their best intentions, we cant stop them");
                 ResetLayout();
+            }
         }
 
         /// <summary>
@@ -357,6 +381,8 @@ namespace Durak
                     if (MessageBox.Show("Are you sure you don't want to play any more cards?", "End Turn?",
                     MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
+                        WriteToFile(log_file_path, "\n" + phcPlayer.PlayerName.ToString() + " decided to end the round without doing another attack");
+
                         // flips the attack boolean and goes to the next turn
                         playerAttacking = !playerAttacking;
                         NextTurn();
@@ -375,6 +401,8 @@ namespace Durak
                 if (MessageBox.Show("Do you want to forfeit the Round? Doing so will result in you taking all cards currently in Play", "Forfeit?",
                     MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
+                    WriteToFile(log_file_path, "\nComputer has won the round as " + phcPlayer.PlayerName.ToString() + " did not defend");
+
                     // if yes, retrieve all the cards on the table and go to the next turn
                     RetrievePlayedCards(phcPlayer);
                     NextTurn();
@@ -399,6 +427,7 @@ namespace Durak
             // disperse the cards to the players
             DisperseCards();
 
+            WriteToFile(log_file_path, "\nNew Round Has Started: " + (playerAttacking ? phcPlayer.PlayerName : phcComputer.PlayerName) + " is attacking");
             // if the player is defending, let the AI attack
             if (!playerAttacking)
                 AI_Logic();
@@ -436,6 +465,7 @@ namespace Durak
                     // then go to next turn
                 if (!cardPlayed)
                 {
+                    WriteToFile(log_file_path,"\n" + phcPlayer.PlayerName.ToString() + " has won the round as the computer was not able to defend");
                     MessageBox.Show("Unable to Defend. Player wins round!", "Round Over");
                     RetrievePlayedCards(phcComputer);
                     NextTurn();
@@ -458,6 +488,7 @@ namespace Durak
                     // and switch the attack to the player
                 else
                 {
+                    WriteToFile(log_file_path, "\nComputer decided to end the round without doing another attack");
                     MessageBox.Show("Computer is finishing the round", "Round Over");
                     playerAttacking = true;
                     NextTurn();
@@ -467,7 +498,7 @@ namespace Durak
             // if there are no cards left and the deck is empty, they have won
             if (cardPlayed && phcComputer.PlayerInformation.CardsRemaining() == 0 && dealer.CurrentCardIndex < dealer.NumberOfCards)
             {
-                GameOver(WINNER_OPTIONS[0]);
+                GameOver(playerNames[0]);
             }
         }
 
@@ -576,10 +607,13 @@ namespace Durak
         /// <param name="phc">the player hand control that will recieve the cards</param>
         private void RetrievePanelCards(Panel pnl, PlayerHand phc)
         {
+            string playerInformation = phc.PlayerName.ToString();
+
             // run through each card and move them to the player
             for (int cardCount = 0; cardCount < pnl.Controls.Count;)
             {
                 CardPictureBox cpb = pnl.Controls[cardCount] as CardPictureBox;
+                WriteToFile(log_file_path, "\t" + playerInformation + " has taken the card " + cpb.PlayingCard.ToString() + " from the table");
                 ChangeCardParameters(phc, ref cpb);
                 phc.AddPlayingCard(cpb);
             }
@@ -617,6 +651,7 @@ namespace Durak
         /// <param name="winner">the person whom won the game</param>
         private void GameOver(string winner)
         {
+            WriteToFile(log_file_path, winner + " won the game");
             // ask if a new game is going to be started
             // if so, reset the game
             if (MessageBox.Show(winner + " has won the game." + Environment.NewLine + "Do you want to start a nwe game?", "Game Over",
@@ -628,9 +663,78 @@ namespace Durak
             else
             {
                 MessageBox.Show("Thanks for playing!", "Exiting");  // Thanks the user for playing the game
+                WriteToFile(log_file_path, "\nGame closed at: " + DateTime.Now.ToString() + "\n=====================================");
                 Environment.Exit(1);
             }
         }
 
+        /// <summary>
+        /// Writes a given string to the provided path
+        /// </summary>
+        /// <param name="filePath">the location of the file</param>
+        /// <param name="stringToWrite">the string to write</param>
+        private void WriteToFile(string filePath, string stringToWrite)
+        {
+            try
+            {
+                // attempts to open the file
+                writer = new StreamWriter(Application.StartupPath + log_file_path, true);
+                // attempts to write the string to the file
+                writer.WriteLine(stringToWrite);
+                // attempts to close the writer
+                writer.Close();
+            }
+            // catches any exceptions and displays an error message
+            catch (IOException ex)
+            {
+                MessageBox.Show("An error arose when writing to the file.", "An Error Occured");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occured: " + ex.Message + Environment.NewLine + ex.StackTrace, "An Error Occured");
+            }
+        }
+
+        /// <summary>
+        ///  Displays a message if the player forcefully closes the game
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DurakUI_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            WriteToFile(log_file_path, "User Closed the game at: " + DateTime.Now.ToString() 
+                                        + "\n\tHopefully the Computer wasn't beating them too badly");
+        }
+
+        internal static int SetNumberOfCards
+        { 
+            set
+            {
+                try
+                {
+                    CardDealer tempDealer = new CardDealer(value);
+                    numberOfCards = value;
+                }
+                catch (CardOutOfRangeException ex)
+                {
+                    MessageBox.Show(ex.Message, "Invalid Selection");
+                }
+            }
+        }
+
+        internal static string PlayerName
+        {
+            set
+            {
+                try
+                {
+                    playerNames[1] = value;
+                }
+                catch (ArgumentException ex)
+                {
+                    MessageBox.Show(ex.Message, "Invalud Name");
+                }
+            }
+        }
     }
 }
