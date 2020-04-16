@@ -1286,3 +1286,286 @@ User Closed the game at: 4/16/2020 6:40:09 PM
 Game Started At: 4/16/2020 6:42:02 PM
 User Closed the game at: 4/16/2020 6:42:11 PM
 	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 7:02:55 PM
+Trump Card: Ace of Diamonds
+
+Players are drawing cards
+	Player Computer has drawn the card Nine of Spades from the deck
+	Player Computer has drawn the card Seven of Hearts from the deck
+	Player Computer has drawn the card Seven of Diamonds from the deck
+	Player Computer has drawn the card Jack of Spades from the deck
+	Player Computer has drawn the card Queen of Clubs from the deck
+	Player Computer has drawn the card King of Spades from the deck
+	Player brennan has drawn the card Jack of Diamonds from the deck
+	Player brennan has drawn the card Queen of Hearts from the deck
+	Player brennan has drawn the card Ten of Diamonds from the deck
+	Player brennan has drawn the card King of Hearts from the deck
+	Player brennan has drawn the card Six of Hearts from the deck
+	Player brennan has drawn the card Nine of Hearts from the deck
+
+New Round Has Started: brennan is attacking
+	brennan attacked with Jack of Diamonds
+
+brennan has won the round as the computer was not able to defend
+	Computer has taken the card Jack of Diamonds from the table
+
+Players are drawing cards
+	Player brennan has drawn the card Ace of Spades from the deck
+
+New Round Has Started: brennan is attacking
+	brennan attacked with Six of Hearts
+	Computer defended with Seven of Hearts
+
+brennan decided to end the round without doing another attack
+
+Players are drawing cards
+	Player brennan has drawn the card Ace of Hearts from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Seven of Diamonds
+	brennan defended with Ten of Diamonds
+
+Computer decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Computer has drawn the card Six of Diamonds from the deck
+	Player brennan has drawn the card Ten of Spades from the deck
+
+New Round Has Started: brennan is attacking
+User Closed the game at: 4/16/2020 7:03:22 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 7:03:39 PM
+Trump Card: Ten of Hearts
+
+Players are drawing cards
+	Player Computer has drawn the card Ace of Clubs from the deck
+	Player Computer has drawn the card Nine of Diamonds from the deck
+	Player Computer has drawn the card Seven of Diamonds from the deck
+	Player Computer has drawn the card Six of Spades from the deck
+	Player Computer has drawn the card Queen of Spades from the deck
+	Player Computer has drawn the card Seven of Hearts from the deck
+	Player test has drawn the card Ace of Spades from the deck
+	Player test has drawn the card Queen of Hearts from the deck
+	Player test has drawn the card Six of Hearts from the deck
+	Player test has drawn the card Queen of Clubs from the deck
+	Player test has drawn the card Queen of Diamonds from the deck
+	Player test has drawn the card Eight of Spades from the deck
+
+New Round Has Started: test is attacking
+	test attacked with Six of Hearts
+	Computer defended with Seven of Hearts
+
+test decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Computer has drawn the card Nine of Hearts from the deck
+	Player test has drawn the card Nine of Clubs from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Queen of Spades
+	test defended with Queen of Hearts
+
+Computer decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Computer has drawn the card Jack of Clubs from the deck
+	Player test has drawn the card Six of Diamonds from the deck
+
+New Round Has Started: test is attacking
+	test attacked with Eight of Spades
+	Computer defended with Nine of Hearts
+User Closed the game at: 4/16/2020 7:04:17 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 7:10:35 PM
+Trump Card: Nine of Diamonds
+
+Players are drawing cards
+	Player Computer has drawn the card Ten of Hearts from the deck
+	Player Computer has drawn the card Seven of Spades from the deck
+	Player Computer has drawn the card Six of Clubs from the deck
+	Player Computer has drawn the card Ace of Clubs from the deck
+	Player Computer has drawn the card Eight of Clubs from the deck
+	Player Computer has drawn the card King of Hearts from the deck
+	Player brennan has drawn the card Nine of Clubs from the deck
+	Player brennan has drawn the card Ten of Spades from the deck
+	Player brennan has drawn the card Six of Diamonds from the deck
+	Player brennan has drawn the card Queen of Spades from the deck
+	Player brennan has drawn the card Ace of Hearts from the deck
+	Player brennan has drawn the card Jack of Hearts from the deck
+
+New Round Has Started: brennan is attacking
+	brennan attacked with Jack of Hearts
+	Computer defended with King of Hearts
+
+brennan decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Computer has drawn the card Jack of Diamonds from the deck
+	Player brennan has drawn the card Ten of Diamonds from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Ace of Clubs
+	brennan defended with Six of Diamonds
+	Computer attacked with Six of Clubs
+
+
+=====================================
+Game Started At: 4/16/2020 7:15:20 PM
+Trump Card: Nine of Diamonds
+
+Players are drawing cards
+	Player Computer has drawn the card King of Hearts from the deck
+	Player Computer has drawn the card Ace of Spades from the deck
+	Player Computer has drawn the card Nine of Hearts from the deck
+	Player Computer has drawn the card Seven of Diamonds from the deck
+	Player Computer has drawn the card King of Clubs from the deck
+	Player Computer has drawn the card Six of Diamonds from the deck
+	Player Brennan has drawn the card Six of Clubs from the deck
+	Player Brennan has drawn the card Seven of Spades from the deck
+	Player Brennan has drawn the card King of Diamonds from the deck
+	Player Brennan has drawn the card Jack of Hearts from the deck
+	Player Brennan has drawn the card Seven of Clubs from the deck
+	Player Brennan has drawn the card Seven of Hearts from the deck
+
+New Round Has Started: Brennan is attacking
+	Brennan attacked with Six of Clubs
+	Computer defended with King of Clubs
+	Brennan attacked with King of Diamonds
+
+Brennan has won the round as the computer was not able to defend
+	Computer has taken the card Six of Clubs from the table
+	Computer has taken the card King of Diamonds from the table
+	Computer has taken the card King of Clubs from the table
+
+Players are drawing cards
+	Player Brennan has drawn the card Jack of Diamonds from the deck
+	Player Brennan has drawn the card Ten of Diamonds from the deck
+
+New Round Has Started: Brennan is attacking
+	Brennan attacked with Seven of Clubs
+	Computer defended with King of Clubs
+	Brennan attacked with Seven of Spades
+	Computer defended with Ace of Spades
+
+Brennan decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Brennan has drawn the card Ten of Hearts from the deck
+	Player Brennan has drawn the card Ace of Diamonds from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Nine of Hearts
+	Brennan defended with Ace of Diamonds
+
+Computer decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Computer has drawn the card Eight of Diamonds from the deck
+	Player Brennan has drawn the card Ace of Hearts from the deck
+
+New Round Has Started: Brennan is attacking
+	Brennan attacked with Ace of Hearts
+	Computer defended with Six of Diamonds
+
+Brennan decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Computer has drawn the card Ace of Clubs from the deck
+	Player Brennan has drawn the card Queen of Clubs from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Seven of Diamonds
+	Brennan defended with Ten of Diamonds
+
+Computer decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Computer has drawn the card Queen of Diamonds from the deck
+	Player Brennan has drawn the card Eight of Clubs from the deck
+
+New Round Has Started: Brennan is attacking
+	Brennan attacked with Ten of Hearts
+	Computer defended with King of Hearts
+
+Brennan decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Computer has drawn the card Queen of Hearts from the deck
+	Player Brennan has drawn the card Ten of Spades from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with King of Diamonds
+
+Computer has won the round as Brennan did not defend
+	Brennan has taken the card King of Diamonds from the table
+
+Players are drawing cards
+	Player Computer has drawn the card Nine of Clubs from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Eight of Diamonds
+	Brennan defended with Jack of Diamonds
+
+Computer decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Computer has drawn the card Nine of Spades from the deck
+
+New Round Has Started: Brennan is attacking
+	Brennan attacked with Seven of Hearts
+	Computer defended with Queen of Hearts
+
+Brennan decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Computer has drawn the card Jack of Spades from the deck
+	Player Brennan has drawn the card Eight of Spades from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Ace of Clubs
+
+Computer has won the round as Brennan did not defend
+	Brennan has taken the card Ace of Clubs from the table
+
+Players are drawing cards
+	Player Computer has drawn the card Queen of Spades from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with Queen of Diamonds
+
+Computer has won the round as Brennan did not defend
+	Brennan has taken the card Queen of Diamonds from the table
+
+Players are drawing cards
+	Player Computer has drawn the card King of Spades from the deck
+
+New Round Has Started: Computer is attacking
+	Computer attacked with King of Spades
+	Brennan defended with Queen of Diamonds
+	Computer attacked with Queen of Spades
+	Brennan defended with King of Diamonds
+
+Computer decided to end the round without doing another attack
+
+Players are drawing cards
+	Player Computer has drawn the card Eight of Hearts from the deck
+	Player Computer has drawn the card Six of Spades from the deck
+
+New Round Has Started: Brennan is attacking
+User Closed the game at: 4/16/2020 7:17:31 PM
+	Hopefully the Computer wasn't beating them too badly
+
+
+=====================================
+Game Started At: 4/16/2020 7:24:44 PM
+User Closed the game at: 4/16/2020 7:24:45 PM
+	Hopefully the Computer wasn't beating them too badly

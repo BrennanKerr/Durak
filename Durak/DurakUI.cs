@@ -441,57 +441,91 @@ namespace Durak
             // the number of cards in teh computers hand
             int numberOfCards = phcComputer.PlayerInformation.CardsRemaining();
             bool cardPlayed = false;    // determines if the computer played a card. Defaulted to false
+            CardPictureBox bestCard = null; // stores the best possible card to play
 
             // AI DEFEND LOGIC
             if (playerAttacking)
             {
-                // run through each card until 1 can be played
-                for (int count = 0; count < numberOfCards && !cardPlayed; count++)
+                // run through each card in the hand
+                for (int count = 0; count < numberOfCards; count++)
                 {
-                    // save the card at the given index
-                    CardPictureBox cpb = phcComputer.RetrieveCardBox(count);
+                    // stores the current card
+                    CardPictureBox currentCard = phcComputer.RetrieveCardBox(count);
 
-                    // if it can succesfully defend, set cardPlayed to true
-                        // make the card face up and move it
-                    if (CheckDefendCard(cpb.PlayingCard))
+                    // if the card can be played as a defence
+                    if (CheckDefendCard(currentCard.PlayingCard))
                     {
-                        cardPlayed = true;
-                        cpb.FaceUp = true;
-                        MovePlayingCard(phcComputer, pnlDefendCards, cpb);
+                        // if the best card has not been set yet, store this card as the best
+                        if (bestCard == null)
+                            bestCard = currentCard;
+                        // if the card is lower than the previously played card, store this card as the best
+                        else if (currentCard.PlayingCard < bestCard.PlayingCard)
+                        {
+                            bestCard = currentCard;
+                        }
                     }
                 }
 
-                // if the ai want able to defend, notify the user and make it recieve all the cards
-                    // then go to next turn
-                if (!cardPlayed)
+                // if there was no card found
+                if (bestCard == null)
                 {
-                    WriteToFile(log_file_path,"\n" + phcPlayer.PlayerName.ToString() + " has won the round as the computer was not able to defend");
+                    // display the message to the log and messagebox
+                    WriteToFile(log_file_path, "\n" + phcPlayer.PlayerName.ToString() + " has won the round as the computer was not able to defend");
                     MessageBox.Show("Unable to Defend. Player wins round!", "Round Over");
+                    // the computer retrieves all the cards and the next turn occurs
                     RetrievePlayedCards(phcComputer);
                     NextTurn();
+                }
+                // otherwise, the card is played
+                else
+                {
+                    bestCard.FaceUp = true;
+                    MovePlayingCard(phcComputer, pnlDefendCards, bestCard);
                 }
             }
 
             // AI ATTACK LOGIC
             else
             {
-                // grab the first card
-                CardPictureBox cpb = phcComputer.RetrieveCardBox(0);
+                // run through each card
+                for(int count = 1; count < numberOfCards; count++)
+                {
+                    // save the card in the corresponding index
+                    CardPictureBox currentCard = phcComputer.RetrieveCardBox(count);
 
-                // if the card can be used to attack, face the card up and play it
-                if (CheckAttackCard(cpb.PlayingCard))
-                {
-                    cpb.FaceUp = true;
-                    MovePlayingCard(phcComputer, pnlAttackCards, phcComputer.RetrieveCardBox(0));
+                    // if the card can be used for an attack
+                    if (CheckAttackCard(currentCard.PlayingCard))
+                    {
+                        // if the best card hasnt been set yet, make this card the best card
+                        if (bestCard == null)
+                            bestCard = currentCard;
+                        // if this card is higher
+                        else if (currentCard.PlayingCard > bestCard.PlayingCard)
+                        {
+                            // if this card is not trump, set it
+                                // otherwise, keep the trump card
+                            if (currentCard.PlayingCard.Suit != Card.TrumpSuit)
+                                bestCard = currentCard;
+                        }
+                    }
                 }
-                // if the computer doesnt have another card to attack with, end the turn
-                    // and switch the attack to the player
-                else
+
+                // if no card was selected
+                if (bestCard == null)
                 {
+                    // notify the player that the computer ended the round
                     WriteToFile(log_file_path, "\nComputer decided to end the round without doing another attack");
                     MessageBox.Show("Computer is finishing the round", "Round Over");
+
+                    // make the player attack and move to the next turn
                     playerAttacking = true;
                     NextTurn();
+                }
+                // otherwise, play the card
+                else
+                {
+                    bestCard.FaceUp = true;
+                    MovePlayingCard(phcComputer, pnlAttackCards,bestCard);
                 }
             }
 
@@ -548,17 +582,6 @@ namespace Durak
             // if the attempted to play card's suit matches the trump suit and the attack card was not
             else if (card.Suit == Card.TrumpSuit && attackCard.Suit != Card.TrumpSuit)
                 returnValue = true;
-
-            // if the card was played and the attack was not the first, keep doing checks
-            if (returnValue && numberOfAttackCards > 1)
-            {
-                // if the suit was not in the attack, return the result of the defend check
-                if (!CheckPanelCards(pnlAttackCards, card))
-                    returnValue = CheckPanelCards(pnlDefendCards, card);
-                // the suit matches one of the previously played ones
-                else
-                    returnValue = true;
-            }
 
             return returnValue; // return the result
         }
