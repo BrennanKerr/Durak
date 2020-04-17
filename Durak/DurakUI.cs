@@ -20,11 +20,17 @@ namespace Durak
 {
     public partial class DurakUI : Form
     {
-        static string[] playerNames = { "Comptuer", "Player" };    // declares the winner options
-        static int numberOfCards;
+        static string[] playerNames = { "Computer", "Player" };     // declares the winner options
+        static readonly string[] WIN_OPTIONS = { "Won", "Lost", "Draw" };    // declares the possible win options
+        static int numberOfCards;   // the number of cards that will be used in the game
+
         const int MINIMUM_NUMBER_OF_CARDS = 6;  // the minimum number of cards in a players hand at the end of each round
-        const string log_file_path = "/files/log.txt";
-        const string stats_file_path = "/fies/stats.txt"; 
+
+        // FILES
+        const string log_file_path = "/files/log.txt";      // the file that stores log information
+        const string stats_file_path = "/files/stats.txt";  // the file that stores the player's stats
+
+        // constant that is used for the game start string
         const string START_GAME_STRING = "\n\n=====================================\nGame Started At: ";
         StreamWriter writer;
 
@@ -32,6 +38,7 @@ namespace Durak
         int currentPlayer;                      // the player whos currently up
         bool playerAttacking;                   // states if the player is supposed to be attacking (true) or defendng (false)
         bool noCardsRemainingNotification;      // states if the user has been notified of no cards remaining
+        string[] playerStats;
 
         /// <summary>
         /// Loads the main form
@@ -40,6 +47,7 @@ namespace Durak
         {
             InitializeComponent();
 
+            // opens the settings form
             SettingForm settings = new SettingForm();
             settings.ShowDialog();
 
@@ -191,10 +199,16 @@ namespace Durak
                 {
                     // if the computer won
                     if (phcComputer.PlayerInformation.CardsRemaining() == 0)
+                    {
+                        UpdatePlayerStats(WIN_OPTIONS[1]);
                         GameOver(playerNames[0]);
+                    }
                     // if the player won
                     else if (phcPlayer.PlayerInformation.CardsRemaining() == 0)
+                    {
+                        UpdatePlayerStats(WIN_OPTIONS[0]);
                         GameOver(playerNames[1]);
+                    }
                 }
 
             }
@@ -257,16 +271,43 @@ namespace Durak
                             MessageBox.Show("The card cannot be played. Must be a higher card in the same suit or be within the trump suit.", "Invalid Move");
                     }
 
-                    // if the player successfully played
+                    // if the player succesfully played a card
+                    if (playedSuccessfully)
+                    {
+                        // if the layer has no cards left
+                        if (phcPlayer.PlayerInformation.CardsRemaining() == 0)
+                        {
+                            // if dealer has no cards left, the player has won
+                            if (dealer.CurrentCardIndex >= dealer.NumberOfCards)
+                            {
+                                UpdatePlayerStats(WIN_OPTIONS[0]);
+                                GameOver(playerNames[1]);
+                            }
+                            // if they were attacking and the defn
+                            else if (playerAttacking)
+                            {
+                                WriteToFile(log_file_path, playerNames[1] + " has successfully defended");
+                                MessageBox.Show("Defence wins as there are no more cards to defend with", "Defence Wins");
+
+                            }
+                            else AI_Logic();
+                        }
+                        else AI_Logic();
+                    }
+
+                    /*// if the player successfully played
                     if (playedSuccessfully)
                     {
                         // if there are no cards left to play
-                        if (phcPlayer.PlayerInformation.CardsRemaining() == 0 && dealer.CurrentCardIndex < dealer.NumberOfCards)
+                        if (phcPlayer.PlayerInformation.CardsRemaining() == 0 && dealer.CurrentCardIndex >= dealer.NumberOfCards)
+                        {
+                            UpdatePlayerStats(WIN_OPTIONS[0]);
                             GameOver(playerNames[1]);
+                        }
                         // otherwise, let the ai play
                         else
                             AI_Logic();
-                    }
+                    }*/
                 }
             }
             // other, the player cannot play
@@ -357,8 +398,9 @@ namespace Durak
         {
             // message box appears prompting for the player to make a decision
             // if they press okay, board reset
-            if (MessageBox.Show("Are you sure you want to reset the game?", "Reset Game", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show("Are you sure you want to reset the game? A loss will be added to your record", "Reset Game", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
+                UpdatePlayerStats(WIN_OPTIONS[1]);
                 WriteToFile(log_file_path, "\nPlayer has decided that their best choice is to reset the game, if that is their best intentions, we cant stop them");
                 ResetLayout();
             }
@@ -479,6 +521,7 @@ namespace Durak
                 // otherwise, the card is played
                 else
                 {
+                    cardPlayed = true;
                     bestCard.FaceUp = true;
                     MovePlayingCard(phcComputer, pnlDefendCards, bestCard);
                 }
@@ -488,7 +531,7 @@ namespace Durak
             else
             {
                 // run through each card
-                for(int count = 1; count < numberOfCards; count++)
+                for(int count = 0; count < numberOfCards; count++)
                 {
                     // save the card in the corresponding index
                     CardPictureBox currentCard = phcComputer.RetrieveCardBox(count);
@@ -524,15 +567,35 @@ namespace Durak
                 // otherwise, play the card
                 else
                 {
+                    cardPlayed = true;
                     bestCard.FaceUp = true;
                     MovePlayingCard(phcComputer, pnlAttackCards,bestCard);
                 }
             }
 
             // if there are no cards left and the deck is empty, they have won
-            if (cardPlayed && phcComputer.PlayerInformation.CardsRemaining() == 0 && dealer.CurrentCardIndex < dealer.NumberOfCards)
+           /* if (cardPlayed && phcComputer.PlayerInformation.CardsRemaining() == 0 && dealer.CurrentCardIndex >= dealer.NumberOfCards)
             {
+                UpdatePlayerStats(WIN_OPTIONS[1]);
                 GameOver(playerNames[0]);
+            }*/
+
+            if (cardPlayed)
+            {
+                if (phcComputer.PlayerInformation.CardsRemaining() == 0)
+                {
+                    if (dealer.CurrentCardIndex >= dealer.NumberOfCards - 1)
+                    {
+                        UpdatePlayerStats(WIN_OPTIONS[1]);
+                        GameOver(playerNames[0]);
+                    }
+                    else if (playerAttacking)
+                    {
+                        WriteToFile(log_file_path, playerNames[0] + " has successfully defended");
+                        MessageBox.Show("Defence wins as there are no more cards to defend with", "Defence Wins");
+
+                    }
+                }
             }
         }
 
@@ -677,7 +740,7 @@ namespace Durak
             WriteToFile(log_file_path, winner + " won the game");
             // ask if a new game is going to be started
             // if so, reset the game
-            if (MessageBox.Show(winner + " has won the game." + Environment.NewLine + "Do you want to start a nwe game?", "Game Over",
+            if (MessageBox.Show(winner + " has won the game." + Environment.NewLine + "Do you want to start a new game?", "Game Over",
                 MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 ResetLayout();
@@ -719,25 +782,128 @@ namespace Durak
         }
 
         /// <summary>
+        /// Writes the players new stats to the stats file
+        /// </summary>
+        /// <param name="ending">Either win, loss, or draw</param>
+        private void UpdatePlayerStats(string ending)
+        {
+            // creates a stream reader to the stats file
+            StreamReader reader = new StreamReader(Application.StartupPath + stats_file_path);
+            // gets new lines, splitting based on the new line character
+            string[] lines = reader.ReadToEnd().Split('\n');
+
+            // sets the current player array to 5 strings
+            string[] currentPlayer = new string[5];
+            bool playerFound = false;   // determines if a player was found
+            int indexOfPlayer = 0;      // the index where the player was found
+
+            // run through each line until either there are no lines left of the player was found
+            for (indexOfPlayer = 0; indexOfPlayer < lines.Length && !playerFound; indexOfPlayer++)
+            {
+                // split the player information
+                currentPlayer = lines[indexOfPlayer].Split(':');
+                // if the current player matches the player whos name is on the game, save it as such
+                if (currentPlayer[0] == phcPlayer.PlayerName)
+                {
+                    playerFound = true;
+                    indexOfPlayer--;
+                }
+            }
+
+            // close the stream reader
+            reader.Close();
+
+            // if a player exists in the file
+            if (playerFound)
+            {
+                // update the number of games they played
+                int numberOfGames = Convert.ToInt32(currentPlayer[1]);
+                currentPlayer[1] = (++numberOfGames).ToString();
+
+                // if the player won the game, add a win
+                if (ending == WIN_OPTIONS[0])
+                {
+                    int numberOfWins = Convert.ToInt32(currentPlayer[2]);
+                    currentPlayer[2] = (++numberOfWins).ToString();
+                }
+                // if the player lost, add a loss
+                else if (ending == WIN_OPTIONS[1])
+                {
+                    int numberOfLosses = Convert.ToInt32(currentPlayer[3]);
+                    currentPlayer[3] = (++numberOfLosses).ToString();
+                }
+                // otherwise, add a draw
+                else
+                {
+                    int numberOfDraws = Convert.ToInt32(currentPlayer[4]);
+                    currentPlayer[4] = (++numberOfDraws).ToString();
+                }
+
+                // replace the old string with the new one
+                lines[indexOfPlayer] = string.Join(":", currentPlayer);
+
+                // open the stream writer
+                writer = new StreamWriter(Application.StartupPath + stats_file_path, false);
+                // write each line to the file
+                foreach (string line in lines)
+                    writer.Write(line);
+
+                // close the stream writer
+                writer.Close();
+            }
+            // otherwise, add the player to the file
+            else
+            {
+                // open the writer
+                writer = new StreamWriter(Application.StartupPath + stats_file_path, true);
+
+                // make a new string array for the players information
+                currentPlayer = new string[5];
+                // add the player name to the string
+                currentPlayer[0] = phcPlayer.PlayerName;
+                // add 1 game to the string
+                currentPlayer[1] = "1";
+                // add the corresponding won/loss/draw to the string
+                currentPlayer[2] = ending == WIN_OPTIONS[0] ? "1" : "0";
+                currentPlayer[3] = ending == WIN_OPTIONS[1] ? "1" : "0";
+                currentPlayer[4] = ending == WIN_OPTIONS[2] ? "1" : "0";
+
+                // write the string to the file
+                writer.WriteLine("\n" + string.Join(":",currentPlayer));
+                writer.Close(); // close the file
+            }
+        }
+
+        /// <summary>
         ///  Displays a message if the player forcefully closes the game
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void DurakUI_FormClosing(object sender, FormClosingEventArgs e)
         {
-            WriteToFile(log_file_path, "User Closed the game at: " + DateTime.Now.ToString() 
-                                        + "\n\tHopefully the Computer wasn't beating them too badly");
+            if (MessageBox.Show("Are you sure you want to close the form? Doing so will result in a loss being added to your record",
+                                    "Closing Game", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                UpdatePlayerStats(WIN_OPTIONS[1]);
+                WriteToFile(log_file_path, "User Closed the game at: " + DateTime.Now.ToString()
+                                            + "\n\tHopefully the Computer wasn't beating them too badly");
+            }
         }
 
+        /// <summary>
+        /// Defines the number of cards that will be used in the game. Used specifically for the SettingForm
+        /// </summary>
         internal static int SetNumberOfCards
         { 
             set
             {
                 try
                 {
+                    // ensures the number of cards is valid
                     CardDealer tempDealer = new CardDealer(value);
                     numberOfCards = value;
                 }
+                // catches any invalid values
                 catch (CardOutOfRangeException ex)
                 {
                     MessageBox.Show(ex.Message, "Invalid Selection");
@@ -745,18 +911,14 @@ namespace Durak
             }
         }
 
+        /// <summary>
+        /// Sets the player name. Specifically for the SettingsForm
+        /// </summary>
         internal static string PlayerName
         {
             set
             {
-                try
-                {
-                    playerNames[1] = value;
-                }
-                catch (ArgumentException ex)
-                {
-                    MessageBox.Show(ex.Message, "Invalud Name");
-                }
+                playerNames[1] = value;
             }
         }
     }
