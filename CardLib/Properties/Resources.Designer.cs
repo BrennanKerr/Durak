@@ -103,16 +103,6 @@ namespace CardLib.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap blue_back {
-            get {
-                object obj = ResourceManager.GetObject("blue_back", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Deuce_C {
             get {
                 object obj = ResourceManager.GetObject("Deuce_C", resourceCulture);
@@ -283,16 +273,6 @@ namespace CardLib.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap green_back {
-            get {
-                object obj = ResourceManager.GetObject("green_back", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Jack_C {
             get {
                 object obj = ResourceManager.GetObject("Jack_C", resourceCulture);
@@ -413,16 +393,6 @@ namespace CardLib.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap purple_back {
-            get {
-                object obj = ResourceManager.GetObject("purple_back", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Queen_C {
             get {
                 object obj = ResourceManager.GetObject("Queen_C", resourceCulture);
@@ -456,16 +426,6 @@ namespace CardLib.Properties {
         internal static System.Drawing.Bitmap Queen_S {
             get {
                 object obj = ResourceManager.GetObject("Queen_S", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap red_back {
-            get {
-                object obj = ResourceManager.GetObject("red_back", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -626,16 +586,6 @@ namespace CardLib.Properties {
         internal static System.Drawing.Bitmap Three_S {
             get {
                 object obj = ResourceManager.GetObject("Three_S", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap yellow_back {
-            get {
-                object obj = ResourceManager.GetObject("yellow_back", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -8,3 +8,24 @@ D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\CardBox\obj\Debu
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\CardBox\obj\Debug\CardBox.dll
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\CardBox\obj\Debug\CardBox.pdb
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\CardBox\obj\Debug\CardBox.CardPictureBox.resources
+C:\Users\Nathan\Desktop\OOP\DurakProject\CardBox\bin\Debug\CardBox.dll
+C:\Users\Nathan\Desktop\OOP\DurakProject\CardBox\bin\Debug\CardBox.pdb
+C:\Users\Nathan\Desktop\OOP\DurakProject\CardBox\bin\Debug\CardLib.dll
+C:\Users\Nathan\Desktop\OOP\DurakProject\CardBox\bin\Debug\CardLib.pdb
+C:\Users\Nathan\Desktop\OOP\DurakProject\CardBox\obj\Debug\CardBox.csprojAssemblyReference.cache
+C:\Users\Nathan\Desktop\OOP\DurakProject\CardBox\obj\Debug\CardBox.CardPictureBox.resources
+C:\Users\Nathan\Desktop\OOP\DurakProject\CardBox\obj\Debug\CardBox.csproj.GenerateResource.cache
+C:\Users\Nathan\Desktop\OOP\DurakProject\CardBox\obj\Debug\CardBox.csproj.CoreCompileInputs.cache
+C:\Users\Nathan\Desktop\OOP\DurakProject\CardBox\obj\Debug\CardBox.csproj.CopyComplete
+C:\Users\Nathan\Desktop\OOP\DurakProject\CardBox\obj\Debug\CardBox.dll
+C:\Users\Nathan\Desktop\OOP\DurakProject\CardBox\obj\Debug\CardBox.pdb
+D:\Durham College\Semester 4\DurakProject\CardBox\bin\Debug\CardBox.dll
+D:\Durham College\Semester 4\DurakProject\CardBox\bin\Debug\CardBox.pdb
+D:\Durham College\Semester 4\DurakProject\CardBox\bin\Debug\CardLib.dll
+D:\Durham College\Semester 4\DurakProject\CardBox\bin\Debug\CardLib.pdb
+D:\Durham College\Semester 4\DurakProject\CardBox\obj\Debug\CardBox.csprojAssemblyReference.cache
+D:\Durham College\Semester 4\DurakProject\CardBox\obj\Debug\CardBox.CardPictureBox.resources
+D:\Durham College\Semester 4\DurakProject\CardBox\obj\Debug\CardBox.csproj.GenerateResource.cache
+D:\Durham College\Semester 4\DurakProject\CardBox\obj\Debug\CardBox.csproj.CopyComplete
+D:\Durham College\Semester 4\DurakProject\CardBox\obj\Debug\CardBox.dll
+D:\Durham College\Semester 4\DurakProject\CardBox\obj\Debug\CardBox.pdb

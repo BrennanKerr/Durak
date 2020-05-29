@@ -6,6 +6,8 @@
  * Since:   28 March 2020
  * 
  * See: http://acbl.mybigcommerce.com/52-playing-cards/ for card images
+ * Utilizes portions of Thom MacDonalds code fround here
+ *      https://www.youtube.com/playlist?list=PLfNfAX7mRzNqDFJr-9UJZ6praJY10fXvY
  */
 
 using System;
@@ -16,6 +18,9 @@ using CardLib;
 
 namespace CardBox
 {
+    /*
+     * A picture box control that allows a card to be utilized in an application/
+     */
     public partial class CardPictureBox: UserControl
     {
         static public Size cardSize = new Size(86, 132);
@@ -90,6 +95,10 @@ namespace CardBox
             myCard.IsFaceUp = false;
         }
 
+        /// <summary>
+        /// Sets a picture box based on a previously established card
+        /// </summary>
+        /// <param name="card">the card to add into the picture box</param>
         public CardPictureBox(Card card)
         {
             InitializeComponent();

@@ -16,3 +16,47 @@ D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\Durak\obj\Debug\
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\Durak\obj\Debug\Durak.exe
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\Durak\obj\Debug\Durak.pdb
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\Durak\obj\Debug\Durak.DurakUI.resources
+D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\Durak\obj\Debug\Durak.SettingForm.resources
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\bin\Debug\Durak.exe.config
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\bin\Debug\Durak.exe
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\bin\Debug\Durak.pdb
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\bin\Debug\CardBox.dll
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\bin\Debug\CardLib.dll
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\bin\Debug\PlayerHandControl.dll
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\bin\Debug\PlayerLib.dll
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\bin\Debug\CardBox.pdb
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\bin\Debug\CardLib.pdb
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\bin\Debug\PlayerHandControl.pdb
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\bin\Debug\PlayerLib.pdb
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\obj\Debug\Durak.csprojAssemblyReference.cache
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\obj\Debug\Durak.DurakUI.resources
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\obj\Debug\Durak.Properties.Resources.resources
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\obj\Debug\Durak.SettingForm.resources
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\obj\Debug\Durak.csproj.GenerateResource.cache
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\obj\Debug\Durak.csproj.CoreCompileInputs.cache
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\obj\Debug\Durak.csproj.CopyComplete
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\obj\Debug\Durak.exe
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\obj\Debug\Durak.pdb
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\obj\Debug\Durak.frmManualForm.resources
+C:\Users\Nathan\Desktop\OOP\DurakProject\Durak\obj\Debug\Durak.frmAboutForm.resources
+D:\Durham College\Semester 4\DurakProject\Durak\bin\Debug\Durak.exe.config
+D:\Durham College\Semester 4\DurakProject\Durak\bin\Debug\Durak.exe
+D:\Durham College\Semester 4\DurakProject\Durak\bin\Debug\Durak.pdb
+D:\Durham College\Semester 4\DurakProject\Durak\bin\Debug\CardBox.dll
+D:\Durham College\Semester 4\DurakProject\Durak\bin\Debug\CardLib.dll
+D:\Durham College\Semester 4\DurakProject\Durak\bin\Debug\PlayerHandControl.dll
+D:\Durham College\Semester 4\DurakProject\Durak\bin\Debug\PlayerLib.dll
+D:\Durham College\Semester 4\DurakProject\Durak\bin\Debug\CardBox.pdb
+D:\Durham College\Semester 4\DurakProject\Durak\bin\Debug\CardLib.pdb
+D:\Durham College\Semester 4\DurakProject\Durak\bin\Debug\PlayerHandControl.pdb
+D:\Durham College\Semester 4\DurakProject\Durak\bin\Debug\PlayerLib.pdb
+D:\Durham College\Semester 4\DurakProject\Durak\obj\Debug\Durak.csprojAssemblyReference.cache
+D:\Durham College\Semester 4\DurakProject\Durak\obj\Debug\Durak.frmAboutForm.resources
+D:\Durham College\Semester 4\DurakProject\Durak\obj\Debug\Durak.DurakUI.resources
+D:\Durham College\Semester 4\DurakProject\Durak\obj\Debug\Durak.frmManualForm.resources
+D:\Durham College\Semester 4\DurakProject\Durak\obj\Debug\Durak.Properties.Resources.resources
+D:\Durham College\Semester 4\DurakProject\Durak\obj\Debug\Durak.SettingForm.resources
+D:\Durham College\Semester 4\DurakProject\Durak\obj\Debug\Durak.csproj.GenerateResource.cache
+D:\Durham College\Semester 4\DurakProject\Durak\obj\Debug\Durak.csproj.CopyComplete
+D:\Durham College\Semester 4\DurakProject\Durak\obj\Debug\Durak.exe
+D:\Durham College\Semester 4\DurakProject\Durak\obj\Debug\Durak.pdb

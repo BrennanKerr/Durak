@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerLib", "PlayerLib.cspr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardLib", "..\CardLib\CardLib.csproj", "{F9F2C025-8076-4BBC-86CE-FD2A64C37587}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardLibTester", "..\CardLibTester\CardLibTester.csproj", "{ACA72B3C-8565-4481-8004-4F82D2EDFD87}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{F9F2C025-8076-4BBC-86CE-FD2A64C37587}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9F2C025-8076-4BBC-86CE-FD2A64C37587}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9F2C025-8076-4BBC-86CE-FD2A64C37587}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ACA72B3C-8565-4481-8004-4F82D2EDFD87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ACA72B3C-8565-4481-8004-4F82D2EDFD87}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ACA72B3C-8565-4481-8004-4F82D2EDFD87}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ACA72B3C-8565-4481-8004-4F82D2EDFD87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

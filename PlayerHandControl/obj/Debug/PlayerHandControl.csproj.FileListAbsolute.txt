@@ -8,7 +8,36 @@ D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerHandContro
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.csproj.CopyComplete
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.dll
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.pdb
-D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.PlayerHandControl.resources
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.csproj.GenerateResource.cache
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerHandControl\bin\Debug\PlayerLib.dll
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerHandControl\bin\Debug\PlayerLib.pdb
+D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.PlayerHand.resources
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerHandControl\bin\Debug\PlayerHandControl.dll
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerHandControl\bin\Debug\PlayerHandControl.pdb
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerHandControl\bin\Debug\CardBox.dll
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerHandControl\bin\Debug\CardLib.dll
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerHandControl\bin\Debug\PlayerLib.dll
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerHandControl\bin\Debug\CardBox.pdb
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerHandControl\bin\Debug\CardLib.pdb
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerHandControl\bin\Debug\PlayerLib.pdb
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.csprojAssemblyReference.cache
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.PlayerHand.resources
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.csproj.GenerateResource.cache
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.csproj.CoreCompileInputs.cache
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.csproj.CopyComplete
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.dll
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.pdb
+D:\Durham College\Semester 4\DurakProject\PlayerHandControl\bin\Debug\PlayerHandControl.dll
+D:\Durham College\Semester 4\DurakProject\PlayerHandControl\bin\Debug\PlayerHandControl.pdb
+D:\Durham College\Semester 4\DurakProject\PlayerHandControl\bin\Debug\CardBox.dll
+D:\Durham College\Semester 4\DurakProject\PlayerHandControl\bin\Debug\CardLib.dll
+D:\Durham College\Semester 4\DurakProject\PlayerHandControl\bin\Debug\PlayerLib.dll
+D:\Durham College\Semester 4\DurakProject\PlayerHandControl\bin\Debug\CardBox.pdb
+D:\Durham College\Semester 4\DurakProject\PlayerHandControl\bin\Debug\CardLib.pdb
+D:\Durham College\Semester 4\DurakProject\PlayerHandControl\bin\Debug\PlayerLib.pdb
+D:\Durham College\Semester 4\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.csprojAssemblyReference.cache
+D:\Durham College\Semester 4\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.PlayerHand.resources
+D:\Durham College\Semester 4\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.csproj.GenerateResource.cache
+D:\Durham College\Semester 4\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.csproj.CopyComplete
+D:\Durham College\Semester 4\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.dll
+D:\Durham College\Semester 4\DurakProject\PlayerHandControl\obj\Debug\PlayerHandControl.pdb

@@ -94,8 +94,17 @@ namespace PlayerLib
         /// Delete the card from the lsit
         /// </summary>
         /// <param name="oldCard">the card to be removed</param>
-        public void Remove(Card oldCard) { myHand.Remove(oldCard); }
-
+        public void Remove(Card oldCard)
+        {
+            try
+            {
+                myHand.Remove(oldCard);
+            }
+            catch (CardDoesNotExistException ex)
+            {
+                throw ex;
+            }
+        }
         /// <summary>
         /// Removes the cards from the hand
         /// </summary>

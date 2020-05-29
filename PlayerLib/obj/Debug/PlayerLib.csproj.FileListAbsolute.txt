@@ -14,3 +14,20 @@ D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerLib\obj\De
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerLib\obj\Debug\PlayerLib.csproj.CopyComplete
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerLib\obj\Debug\PlayerLib.dll
 D:\Durham College\Semester 4\OOP4200\Final Project\DurakProject\PlayerLib\obj\Debug\PlayerLib.pdb
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerLib\bin\Debug\PlayerLib.dll
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerLib\bin\Debug\PlayerLib.pdb
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerLib\bin\Debug\CardLib.dll
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerLib\bin\Debug\CardLib.pdb
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerLib\obj\Debug\PlayerLib.csprojAssemblyReference.cache
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerLib\obj\Debug\PlayerLib.csproj.CoreCompileInputs.cache
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerLib\obj\Debug\PlayerLib.csproj.CopyComplete
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerLib\obj\Debug\PlayerLib.dll
+C:\Users\Nathan\Desktop\OOP\DurakProject\PlayerLib\obj\Debug\PlayerLib.pdb
+D:\Durham College\Semester 4\DurakProject\PlayerLib\bin\Debug\PlayerLib.dll
+D:\Durham College\Semester 4\DurakProject\PlayerLib\bin\Debug\PlayerLib.pdb
+D:\Durham College\Semester 4\DurakProject\PlayerLib\bin\Debug\CardLib.dll
+D:\Durham College\Semester 4\DurakProject\PlayerLib\bin\Debug\CardLib.pdb
+D:\Durham College\Semester 4\DurakProject\PlayerLib\obj\Debug\PlayerLib.csprojAssemblyReference.cache
+D:\Durham College\Semester 4\DurakProject\PlayerLib\obj\Debug\PlayerLib.csproj.CopyComplete
+D:\Durham College\Semester 4\DurakProject\PlayerLib\obj\Debug\PlayerLib.dll
+D:\Durham College\Semester 4\DurakProject\PlayerLib\obj\Debug\PlayerLib.pdb

@@ -8,6 +8,7 @@
  */
 
 using System;
+using System.Collections.Generic;
 
 namespace CardLib
 {
@@ -16,6 +17,10 @@ namespace CardLib
     /// </summary>
     public class CardDealer
     {
+        /// <summary>
+        /// The possible deck sizes
+        /// </summary>
+        private static readonly List<int> DECK_SIZES = new List<int>(){ 20, 36, 52 };
         /// <summary>
         /// The cards in play
         /// </summary>
@@ -37,16 +42,10 @@ namespace CardLib
         /// <throws>ArgumentOutOfRangeException if the number of cards is not 52, 36, or 20</throws>
         public CardDealer(int cardCount = 52)
         {
-            // if the card range is not valid
-            if (cardCount != 52 && cardCount != 36 && cardCount != 20)
-                throw new CardOutOfRangeException("The number of cards must be either 20, 36, or 52", 0);
-            
-            // sets the number of cards
-            numberOfCards = cardCount;
             // initalies the card list
             dealerCards = new CardList();
-            // stores the cards
-            ObtainCards();
+            // sets the number of cards
+            NumberOfCards = cardCount;
         }
 
         /// <summary>
@@ -81,9 +80,9 @@ namespace CardLib
                 dealerCards.Clear();
             
             // determine the starting index
-            if (numberOfCards == 20) startingRank = 10;
-            else if (numberOfCards == 36) startingRank = 6;
-            else startingRank = 2;
+            if (numberOfCards == DECK_SIZES[0]) startingRank = (int)CardRank.Ten;
+            else if (numberOfCards == DECK_SIZES[1]) startingRank = (int)CardRank.Six;
+            else startingRank = (int)CardRank.Deuce;
 
             // obtain the certain number of cards
             for (int suitCount = 0; suitCount < 4; suitCount++)
@@ -114,11 +113,36 @@ namespace CardLib
         }
 
         /// <summary>
-        /// Returns the number of cards the dealer starts with
+        /// Get or set the number of cards the dealer starts with
         /// </summary>
         public int NumberOfCards
         {
             get { return numberOfCards; }
+            set
+            {
+                // if the size is not in the predefined list
+                if (!DECK_SIZES.Contains(value))
+                {
+                    int numberOfSizes = DECK_SIZES.Count;   // the number of possible sizes
+                    string errorMessatge = "The number of cards must be either ";   // begins the error message
+
+                    // appends each size except for the last to the error message
+                    for (int count = 0; count < numberOfSizes - 1; count++)
+                    {
+                        errorMessatge += DECK_SIZES[count] + ", ";
+                    }
+                    // appends the last to the error message
+                    errorMessatge += "or " + DECK_SIZES[numberOfSizes - 1];
+
+                    // throws the exception
+                    throw new CardOutOfRangeException(errorMessatge, 0);
+                }
+                else  // otherwise set it
+                {
+                    numberOfCards = value;
+                    ObtainCards();  // obtains the cards
+                }
+            }
         }
     }
 }

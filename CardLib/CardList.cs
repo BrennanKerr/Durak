@@ -4,6 +4,9 @@
  * 
  * Author:  Group 1
  * Since:   8 March 2020
+ * 
+ * Reference:   Watson, K. et al. (2013). Beginning Visual C# 2022 Programming. 
+ *                  Wrox Press.
  */
 
 using System;
@@ -31,6 +34,8 @@ namespace CardLib
         /// <param name="oldCard">the card that is going to be deleted</param>
         public void Remove(Card oldCard)
         {
+            if (!List.Contains(oldCard))
+                throw new CardDoesNotExistException(oldCard.ToString()  + " does not exist in this players hand", oldCard);
             List.Remove(oldCard);
         }
 
